@@ -6,7 +6,7 @@ import '@/styles/globals.css';
 import '@/styles/colors.css';
 
 import { siteConfig } from '@/constant/config';
-
+import { NavBar } from '@/components/navbar/NavBar';
 // !STARTERCONF Change these default meta
 // !STARTERCONF Look at @/constant/config to change them
 export const metadata: Metadata = {
@@ -55,7 +55,10 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body>{children}</body>
+      <body className='mx-20 bg-black text-white'>
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }
