@@ -13,7 +13,7 @@ export const NavBar = () => {
       </a>
 
       <nav>
-        <ul className='flex space-x-8 text-xs font-medium'>
+        <ul className='flex space-x-6 text-xs font-medium'>
           <Item className=' px-1 py-3 transition duration-500 hover:border-b-4 hover:border-teal-500'>
             About us
           </Item>
