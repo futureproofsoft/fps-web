@@ -5,8 +5,9 @@ import '@/styles/globals.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
 
-import { siteConfig } from '@/constant/config';
 import { NavBar } from '@/components/navbar/NavBar';
+
+import { siteConfig } from '@/constant/config';
 // !STARTERCONF Change these default meta
 // !STARTERCONF Look at @/constant/config to change them
 export const metadata: Metadata = {
