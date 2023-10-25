@@ -5,7 +5,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "eslint.validate": ["json", { "language": "typescript", "autoFix": true }],
+
   // Tailwind CSS Autocomplete, add more if used in projects
   "tailwindCSS.classAttributes": [
     "class",
