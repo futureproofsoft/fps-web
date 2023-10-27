@@ -5,10 +5,17 @@ export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(68deg, var(--tw-gradient-stops))',
+      },
       fontFamily: {
         primary: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        lightGreen: '#3DAB84',
+        darkBlue: '#1369A5',
+        greenText: '#8BD8BD',
+        blackBg: '#111111',
         primary: {
           // Customize it on globals.css :root
           50: 'rgb(var(--tw-color-primary-50) / <alpha-value>)',
