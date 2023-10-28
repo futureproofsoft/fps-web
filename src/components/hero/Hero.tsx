@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import * as React from 'react';
 
-import HeroImage from '../../../public/images/hero2.png';
+import HeroImage from '../../../public/images/laptop.png';
 
 export const Hero = () => {
   return (
-    <div className='flex items-center justify-between'>
-      <div>
+    <div className='flex items-center justify-between pt-14'>
+      <div className='w-5/12'>
         <h2 className='font-large text-4xl'>
           Let's turn your <strong className='text-teal-400'>idea</strong> into
           <br />
@@ -23,7 +23,7 @@ export const Hero = () => {
         </p>
       </div>
       <div>
-        <Image src={HeroImage} alt='Hero image' width={750} />
+        <Image src={HeroImage} alt='Hero image' width={450} />
       </div>
     </div>
   );
