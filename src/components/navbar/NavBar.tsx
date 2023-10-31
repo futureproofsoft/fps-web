@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import { Item } from '@/components/navbar/Item';
 
-import Logo from '../../../public/images/logo.png';
+import Logo from '../../../public/images/logo2.png';
 
 export const NavBar = () => {
   const [scrollUp, setScrollUp] = React.useState(false);
@@ -63,35 +63,35 @@ export const NavBar = () => {
 
   return (
     <header
-      className={`transparent  relative flex items-center justify-between
+      className={`transparent relative z-30 -mx-20 flex items-center justify-between px-20
       ${
         scrollUp && yscale
-          ? 'sticky top-0 bg-black/90 transition duration-1000'
+          ? 'sticky top-0  bg-black/90 transition duration-700'
           : 'transition duration-300'
       } `}
     >
       <a href='#'>
-        <Image width={200} height={50} alt='Logo' src={Logo} className='z-20' />
+        <Image width={260} alt='Logo' src={Logo} className='z-20 py-4' />
       </a>
 
       <nav>
-        <ul className='flex cursor-pointer space-x-6 text-xs font-medium'>
-          <Item className=' px-1 py-3 transition duration-300 hover:border-b-4 hover:border-teal-500'>
+        <ul className='flex space-x-6 text-base font-medium'>
+          <Item className='hover:border-greenText  cursor-pointer px-1 py-3 font-normal transition duration-300 hover:border-b-4'>
             About us
           </Item>
-          <Item className=' px-1 py-3 transition duration-300 hover:border-b-4 hover:border-teal-500'>
+          <Item className='hover:border-greenText  cursor-pointer px-1 py-3 font-normal transition duration-300 hover:border-b-4'>
             Technologies
           </Item>
-          <Item className=' px-1 py-3 transition duration-300 hover:border-b-4 hover:border-teal-500'>
+          <Item className='hover:border-greenText  cursor-pointer px-1 py-3 font-normal transition duration-300 hover:border-b-4'>
             Services
           </Item>
-          <Item className=' px-1 py-3 transition duration-300 hover:border-b-4 hover:border-teal-500'>
+          <Item className='hover:border-greenText  cursor-pointer px-1 py-3 font-normal transition duration-300 hover:border-b-4'>
             Reviews
           </Item>
-          <Item className=' px-1 py-3 transition duration-300 hover:border-b-4 hover:border-teal-500'>
+          <Item className='hover:border-greenText  cursor-pointer px-1 py-3 font-normal transition duration-300 hover:border-b-4'>
             Careers
           </Item>
-          <Item className='rounded-2xl border-indigo-500 bg-teal-500 px-6 py-2.5'>
+          <Item className='color-1  btn-hover cursor-pointer rounded-3xl px-8 py-3 font-bold'>
             Contact us
           </Item>
         </ul>

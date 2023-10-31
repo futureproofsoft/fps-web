@@ -3,6 +3,7 @@
 import Head from 'next/head';
 import * as React from 'react';
 
+import { Assets } from '@/components/assets/Assets';
 import ContactUs from '@/components/ContactUs';
 import { Hero } from '@/components/hero/Hero';
 
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Head>
         <title>Hi</title>
       </Head>
+      <Assets />
       <Hero />
       <ContactUs />
     </main>
