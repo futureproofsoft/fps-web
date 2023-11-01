@@ -22,7 +22,7 @@ export default function ContactUs() {
             </p>
 
             <p className='font-sans text-base text-white'>
-              <div className='flex-row'>
+              <span className='flex-row'>
                 <MailSVG
                   className='inline'
                   width={40}
@@ -30,9 +30,9 @@ export default function ContactUs() {
                   fill='lightgreen'
                 />
                 futureproofsoft@gmail.com
-              </div>
+              </span>
 
-              <div className='flex-row'>
+              <span className='flex-row'>
                 <PhoneSVG
                   className='inline'
                   width={40}
@@ -40,7 +40,7 @@ export default function ContactUs() {
                   fill='lightgreen'
                 />
                 +381 64 31 67 261
-              </div>
+              </span>
             </p>
           </div>
         </div>{' '}

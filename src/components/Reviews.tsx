@@ -1,12 +1,45 @@
 'use client';
+
 import Image from 'next/image';
 import * as React from 'react';
+import { useState } from 'react';
+
+import { ReviewItem } from '@/components/ReviewItem';
 
 import PhonePicture from '../../public/images/freestocks-L5DxWLmywmM-unsplash.png';
 import ProfilePicture from '../../public/images/pexels-linkedin-sales-navigator-2182970.png';
 import LeftArrow from '../../public/svg/left-arrow.svg';
 
 export default function Reviews() {
+  const data = [
+    {
+      image: ProfilePicture,
+      name: 'Dominic Johnson',
+      title: 'CEO/MobileLabs',
+      message:
+        'MindInventory developed and launched an Android and iOS app from scratch. Additionaly, they provided free support for two months after the launch to ensure bugs and updates were handled smoothly.',
+    },
+    {
+      image: ProfilePicture,
+      name: 'Dominic Johnson',
+      title: 'CEO/MobileLabs',
+      message:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eros eu ligula hendrerit ullamcorper. Aliquam id urna ut elit condimentum efficitur. Cras eget efficitur enim. Integer non massa ligula.',
+    },
+  ];
+  const [currentItemIndex, setCurrentItemIndex] = useState(0);
+  const prevItem = () => {
+    0;
+    const isFirstItem = currentItemIndex === 0;
+    const newIndex = isFirstItem ? data.length - 1 : currentItemIndex - 1;
+    setCurrentItemIndex(newIndex);
+  };
+  const nextItem = () => {
+    const isLastItem = currentItemIndex === data.length - 1;
+    const newIndex = isLastItem ? 0 : currentItemIndex + 1;
+    setCurrentItemIndex(newIndex);
+  };
+
   return (
     <section>
       <div className='my-12 grid grid-cols-3'>
@@ -17,57 +50,31 @@ export default function Reviews() {
           <p className='font-sans text-4xl font-bold text-white'>
             How <span className='text-greenText'>our clients</span> see us
           </p>
-          <div>
-            <div className='from-lightGreen to-darkBlue bg-custom-gradient width-200 z-10 -mr-20 flex flex-col rounded-3xl text-white'>
-              <div className='mb-5 flex flex-row'>
-                <div className='mx-10 flex flex-row rounded-bl-full rounded-br-full bg-white text-black'>
-                  <Image
-                    src={ProfilePicture}
-                    width={100}
-                    height={100}
-                    className='mx-1 mb-1 mt-8'
-                    alt='Profile Picture'
-                  />
-                </div>
-                <div className='mt-16 flex flex-col'>
-                  <p className='opacity-1 font-bold'>Dominic Johnson</p>
-                  <p className='opacity-1 '>CEO/MobileLabs</p>
-                </div>
-              </div>
-              <p className='px-10 pb-10 font-sans text-sm text-xl text-white'>
-                "MindInventory developed and launched an Android and iOS app
-                from scratch. Additionaly, they provided free support for two
-                months after the launch to ensure bugs and updates were handled
-                smoothly."
-              </p>
-            </div>
-          </div>
+          {data.map((item, index) => (
+            <ReviewItem
+              active={index === currentItemIndex}
+              key={item.name}
+              image={item.image}
+              name={item.name}
+              title={item.title}
+              message={item.message}
+            />
+          ))}
+
           <div className='mt-5'>
             <button
               type='button'
+              onClick={prevItem}
               className='mr-2 inline-flex rotate-1 items-center  rounded-full border-2  border-green-300 p-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
             >
               <LeftArrow width='16px' height='16px' />
             </button>
             <button
               type='button'
+              onClick={nextItem}
               className='mr-2 inline-flex items-center rounded-full border-2 border-green-300 p-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
             >
-              <svg
-                className='h-4 w-4'
-                aria-hidden='true'
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 14 10'
-              >
-                <path
-                  stroke='currentColor'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  stroke-width='2'
-                  d='M1 5h12m0 0L9 1m4 4L9 9'
-                />
-              </svg>
+              <LeftArrow className='rotate-1' width='16px' height='16px' />
             </button>
           </div>
         </div>
