@@ -4,6 +4,13 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
+    typography: {
+      DEFAULT: {
+        p: {
+          margin: 0,
+        },
+      },
+    },
     extend: {
       backgroundImage: {
         'custom-gradient': 'linear-gradient(68deg, var(--tw-gradient-stops))',
