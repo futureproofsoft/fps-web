@@ -6,22 +6,22 @@ import PhoneSVG from '../../public/svg/phone-call-svgrepo-com.svg';
 export default function ContactUs() {
   return (
     <section>
-      <div className='grid grid-cols-2 space-x-10 py-12'>
+      <div className='my-40 grid grid-cols-2 space-x-10'>
         <div className='grid grid-cols-1'>
           <div className='prose lg:prose-xl'>
-            <h2 className='border-s-4 border-green-300 p-3 uppercase tracking-wider text-white'>
+            <h2 className='border-s-4 border-green-300 p-3 text-2xl uppercase tracking-wider text-white'>
               Contact us
             </h2>
             <p className='my-10 font-sans text-6xl font-bold text-white'>
               Talk to <span className='text-greenText'>us</span> about your
               <span className='text-greenText'> project</span>.
             </p>
-            <p className='my-5 text-lg text-white '>
+            <p className='my-5 text-xl text-white '>
               Do you have a vision for software that will make life easier for
               users? Then don't wait anymore!
             </p>
 
-            <p className='font-sans text-base text-white'>
+            <p className='flex flex-col font-sans text-xl text-white'>
               <span className='flex-row'>
                 <MailSVG
                   className='inline'

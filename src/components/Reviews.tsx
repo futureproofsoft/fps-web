@@ -44,10 +44,10 @@ export default function Reviews() {
     <section>
       <div className='my-12 grid grid-cols-3'>
         <div className='prose lg:prose-xl z-10 flex flex-col justify-between'>
-          <h2 className=' border-s-4 border-green-300 px-3 uppercase tracking-wider text-white'>
+          <h3 className='border-s-4 border-green-300 px-3 uppercase tracking-wider text-white'>
             Reviews
-          </h2>
-          <p className='font-sans text-4xl font-bold text-white'>
+          </h3>
+          <p className='mb-16 mt-8 font-sans text-6xl font-bold text-white'>
             How <span className='text-greenText'>our clients</span> see us
           </p>
           {data.map((item, index) => (
@@ -61,7 +61,7 @@ export default function Reviews() {
             />
           ))}
 
-          <div className='mt-5'>
+          <div className='mt-6'>
             <button
               type='button'
               onClick={prevItem}

@@ -17,8 +17,10 @@ export const ReviewItem = ({
 }: ReviewItemProps) => {
   return (
     <div
-      className={`from-lightGreen to-darkBlue bg-custom-gradient z-10 -mr-20 flex flex-col rounded-3xl text-white  ${
-        active ? 'flex focus:transition focus:duration-500' : 'hidden'
+      className={`bg-custom-gradient from-lightGreen to-darkBlue z-10 -mr-20 flex transform flex-col rounded-3xl text-white transition-transform duration-500 ${
+        active
+          ? 'translate-x-0 opacity-100'
+          : 'absolute -top-10 -translate-x-full opacity-0'
       }`}
     >
       <div className='mb-5 flex flex-row'>
@@ -32,8 +34,8 @@ export const ReviewItem = ({
           />
         </div>
         <div className='mt-16 flex flex-col'>
-          <p className='opacity-1 font-bold'>{name}</p>
-          <p className='opacity-1 '>{title}</p>
+          <p className='opacity-1 text-[28px] font-bold'>{name}</p>
+          <p className='opacity-1 text-xl '>{title}</p>
         </div>
       </div>
       <p className='duration:500 px-10 pb-10 font-sans text-sm text-xl text-white transition'>
