@@ -9,6 +9,7 @@ import { ReviewItem } from '@/components/ReviewItem';
 import PhonePicture from '../../public/images/freestocks-L5DxWLmywmM-unsplash.png';
 import ProfilePicture from '../../public/images/pexels-linkedin-sales-navigator-2182970.png';
 import LeftArrow from '../../public/svg/left-arrow.svg';
+import RightArrow from '../../public/svg/right-arrow.svg';
 
 export default function Reviews() {
   const data = [
@@ -65,16 +66,16 @@ export default function Reviews() {
             <button
               type='button'
               onClick={prevItem}
-              className='mr-2 inline-flex rotate-1 items-center  rounded-full border-2  border-green-300 p-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+              className='border-greenText mr-2 inline-flex rotate-1  items-center rounded-full  border-2 p-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
             >
               <LeftArrow width='16px' height='16px' />
             </button>
             <button
               type='button'
               onClick={nextItem}
-              className='mr-2 inline-flex items-center rounded-full border-2 border-green-300 p-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+              className='border-greenText mr-2 inline-flex items-center rounded-full border-2 p-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
             >
-              <LeftArrow className='rotate-1' width='16px' height='16px' />
+              <RightArrow className='' width='16px' height='16px' />
             </button>
           </div>
         </div>
