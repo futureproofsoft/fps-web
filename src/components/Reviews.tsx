@@ -66,14 +66,14 @@ export default function Reviews() {
             <button
               type='button'
               onClick={prevItem}
-              className='border-greenText mr-2 inline-flex rotate-1  items-center rounded-full  border-2 p-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+              className='border-greenText mr-2 inline-flex rotate-1  items-center rounded-full  border-2 p-2.5 text-center text-sm font-medium text-white focus:outline-none'
             >
               <LeftArrow width='16px' height='16px' />
             </button>
             <button
               type='button'
               onClick={nextItem}
-              className='border-greenText mr-2 inline-flex items-center rounded-full border-2 p-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+              className='border-greenText mr-2 inline-flex items-center rounded-full border-2 p-2.5 text-center text-sm font-medium text-white focus:outline-none'
             >
               <RightArrow className='' width='16px' height='16px' />
             </button>
