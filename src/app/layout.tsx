@@ -5,6 +5,7 @@ import '@/styles/globals.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
 
+import { Footer } from '@/components/Footer';
 import { NavBar } from '@/components/navbar/NavBar';
 
 import { siteConfig } from '@/constant/config';
@@ -59,6 +60,7 @@ export default function RootLayout({
       <body className='bg-blackBg mx-20 text-white'>
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );
