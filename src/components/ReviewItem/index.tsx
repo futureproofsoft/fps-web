@@ -17,7 +17,7 @@ export const ReviewItem = ({
 }: ReviewItemProps) => {
   return (
     <div
-      className={`bg-custom-gradient from-lightGreen to-darkBlue z-10 -mr-20 flex transform flex-col rounded-3xl text-white transition-transform duration-500 ${
+      className={`bg-custom-gradient from-lightGreen to-darkBlue z-10 -mr-20 flex transform flex-col rounded-3xl text-white transition-transform duration-700 ${
         active
           ? 'translate-x-0 opacity-100'
           : 'absolute -top-10 -translate-x-full opacity-0'
@@ -29,7 +29,7 @@ export const ReviewItem = ({
             src={image}
             width={100}
             height={100}
-            className='duration:400 mx-1 mb-1 mt-8 transition'
+            className='mx-1 mb-1 mt-8 '
             alt='Profile Picture'
           />
         </div>
@@ -38,7 +38,7 @@ export const ReviewItem = ({
           <p className='opacity-1 text-xl '>{title}</p>
         </div>
       </div>
-      <p className='duration:500 px-10 pb-10 font-sans text-sm text-xl text-white transition'>
+      <p className='px-10 pb-10 font-sans text-sm text-xl text-white '>
         {message}
       </p>
     </div>
