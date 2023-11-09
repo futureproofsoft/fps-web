@@ -6,6 +6,8 @@ import * as React from 'react';
 import { Assets } from '@/components/assets/Assets';
 import ContactUs from '@/components/ContactUs';
 import { Hero } from '@/components/hero/Hero';
+import { HowItWorks } from '@/components/HowItWorks/HowItWorks';
+import { WhoWeAre } from '@/components/HowItWorks/WhoWeAre';
 import Reviews from '@/components/Reviews';
 
 // !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
@@ -20,6 +22,8 @@ export default function HomePage() {
       </Head>
       <Assets />
       <Hero />
+      <WhoWeAre />
+      <HowItWorks />
       <Reviews />
       <ContactUs />
     </main>
