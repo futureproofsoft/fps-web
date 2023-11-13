@@ -29,7 +29,7 @@ export const HowItWorks = () => {
       if (sectionRef.current) {
         const sectionRect = sectionRef.current.getBoundingClientRect();
         const scrollPosition = window.scrollY;
-        const elementHeight = sectionRect.height / (works.length - 1.6);
+        const elementHeight = sectionRect.height / (works.length - 2);
         const newActiveElement = Math.floor(
           (scrollPosition - sectionRect.top) / elementHeight
         );
