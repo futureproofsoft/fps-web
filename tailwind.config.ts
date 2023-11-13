@@ -41,6 +41,11 @@ export default {
         dark: '#222222',
       },
       keyframes: {
+        'spin-X': {
+          '0%, 100%': { transform: 'rotateY(30deg)' },
+          '50%': { transform: 'rotateY(180deg)' },
+        },
+
         flicker: {
           '0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100%': {
             opacity: '0.99',
@@ -64,6 +69,7 @@ export default {
       animation: {
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',
+        'spin-X': 'spin-X 3s linear infinite',
       },
     },
   },
