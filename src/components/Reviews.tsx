@@ -1,15 +1,14 @@
 'use client';
 
 import Image from 'next/image';
+import PhonePicture from 'public/images/freestocks-L5DxWLmywmM-unsplash.png';
+import ProfilePicture from 'public/images/pexels-linkedin-sales-navigator-2182970.png';
+import LeftArrow from 'public/svg/left-arrow.svg';
+import RightArrow from 'public/svg/right-arrow.svg';
 import * as React from 'react';
 import { useState } from 'react';
 
 import { ReviewItem } from '@/components/ReviewItem';
-
-import PhonePicture from '../../public/images/freestocks-L5DxWLmywmM-unsplash.png';
-import ProfilePicture from '../../public/images/pexels-linkedin-sales-navigator-2182970.png';
-import LeftArrow from '../../public/svg/left-arrow.svg';
-import RightArrow from '../../public/svg/right-arrow.svg';
 
 export default function Reviews() {
   const data = [
@@ -30,7 +29,6 @@ export default function Reviews() {
   ];
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
   const prevItem = () => {
-    0;
     const isFirstItem = currentItemIndex === 0;
     const newIndex = isFirstItem ? data.length - 1 : currentItemIndex - 1;
     setCurrentItemIndex(newIndex);
@@ -54,7 +52,7 @@ export default function Reviews() {
           {data.map((item, index) => (
             <ReviewItem
               active={index === currentItemIndex}
-              key={item.name}
+              key={index}
               image={item.image}
               name={item.name}
               title={item.title}
