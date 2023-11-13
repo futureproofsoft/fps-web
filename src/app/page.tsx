@@ -10,6 +10,7 @@ import { HowItWorks } from '@/components/HowItWorks/HowItWorks';
 import { WhoWeAre } from '@/components/HowItWorks/WhoWeAre';
 import Reviews from '@/components/Reviews';
 import Services from '@/components/Services';
+import { Technologies } from '@/components/Technologies/Technologies';
 
 // !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
 // Before you begin editing, follow all comments with `STARTERCONF`,
@@ -25,6 +26,7 @@ export default function HomePage() {
       <Hero />
       <WhoWeAre />
       <HowItWorks />
+      <Technologies />
       <Services />
       <Reviews />
       <ContactUs />

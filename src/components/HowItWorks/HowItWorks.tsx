@@ -29,7 +29,7 @@ export const HowItWorks = () => {
       if (sectionRef.current) {
         const sectionRect = sectionRef.current.getBoundingClientRect();
         const scrollPosition = window.scrollY;
-        const elementHeight = sectionRect.height / (works.length - 2);
+        const elementHeight = sectionRect.height / (works.length - 1.5);
         const newActiveElement = Math.floor(
           (scrollPosition - sectionRect.top) / elementHeight
         );
@@ -69,7 +69,7 @@ export const HowItWorks = () => {
           );
         })}
       </div>
-      <div className='flex w-2/5'>
+      <div className='flex w-2/6'>
         <LogoFps alt='Logo Future Proof Soft' />
       </div>
     </section>

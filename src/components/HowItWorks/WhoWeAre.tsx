@@ -3,10 +3,10 @@ import * as React from 'react';
 export const WhoWeAre = () => {
   return (
     <div className='py-28'>
-      <h3 className='border-greenText mt-4 border-s-4 px-3 text-xl font-bold'>
+      <h3 className='border-greenText border-s-4 px-3 text-xl font-bold tracking-[4.8px]'>
         WHO WE ARE
       </h3>
-      <div className='flex justify-between py-8'>
+      <div className='flex justify-between py-7'>
         <h2 className='w-1/2 pb-8 text-6xl font-bold leading-none'>
           Your <span className='text-greenText'>digital partner</span> to create
           a <span className='text-greenText'>recognizable</span> brand.
