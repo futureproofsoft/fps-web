@@ -144,3 +144,55 @@
 .laptop-shadow {
   filter: drop-shadow(-40px 50px 4rem #8bd8bd20);
 }
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-500px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animation-slide-left {
+  animation: slideInLeft 1s ease-in-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(500px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animation-slide-right {
+  animation: slideInRight 1s ease-in-out;
+}
+
+.flash {
+  animation: flash 1s ease-in;
+}
+@keyframes flash {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.flash-color {
+  animation: flash-color 0.3s ease-in-out;
+}
+@keyframes flash-color {
+  0% {
+    background: hsla(0, 0%, 0%, 0.9);
+  }
+  100% {
+    background: transparent;
+  }
+}

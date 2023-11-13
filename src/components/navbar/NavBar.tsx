@@ -1,25 +1,39 @@
 'use client';
-import Image from 'next/image';
+
+import LogoHeader from 'public/svg/LogoHeader.svg';
 import * as React from 'react';
 
 import { Item } from '@/components/navbar/Item';
 
-import Logo from '../../../public/images/logo2.png';
-
 export const NavBar = () => {
-  const [scrollUp, setScrollUp] = React.useState(false);
-  const [prevScrollY, setPrevScrollY] = React.useState(0);
+  const [showNav, setShowNav] = React.useState(true);
+  const [lastScrollPosition, setLastScrollPosition] = React.useState(0);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollPosition) {
+        setShowNav(false);
+      } else {
+        setShowNav(true);
+      }
+      setLastScrollPosition(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollPosition]);
 
   React.useEffect(() => {
     const scrollableElement = document.body;
-
     scrollableElement.addEventListener('wheel', checkScrollDirection);
 
     function checkScrollDirection(event: WheelEvent) {
       if (checkScrollDirectionIsUp(event)) {
-        setScrollUp(true);
+        setShowNav(true);
       } else {
-        setScrollUp(false);
+        setShowNav(false);
       }
     }
 
@@ -29,53 +43,34 @@ export const NavBar = () => {
       }
       return false;
     }
-
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > prevScrollY) {
-        if (scrollUp) {
-          setScrollUp(false);
-        }
-      } else {
-        if (!scrollUp) {
-          setScrollUp(true);
-        }
-      }
-
-      setPrevScrollY(currentScrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      scrollableElement.removeEventListener('wheel', checkScrollDirection);
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('scroll', handleScroll);
-      }
-    };
   });
 
-  let yscale = 1;
+  let yscale = 0;
   if (typeof window !== 'undefined') {
     yscale = window.scrollY / window.innerHeight;
   }
 
+  const navStyle = {
+    opacity: showNav ? 1 : 0,
+    top: showNav ? 0 : '-100px',
+    transition: 'opacity 0.5s, top 0.5s',
+    transitionTimingFunction: 'ease-in-out',
+  };
+
   return (
     <header
-      className={`transparent relative z-30 -mx-20 flex items-center justify-between px-20
-      ${
-        scrollUp && yscale
-          ? 'sticky top-0  bg-black/90 transition duration-700'
-          : 'transition duration-300'
+      style={navStyle}
+      className={`transparent sticky z-30 -mx-20 flex items-center justify-between px-20
+      ${yscale > 0 ? `sticky top-0 transition duration-500` : ''} ${
+        showNav && yscale > 0 ? `bg-black/90` : `flash-color `
       } `}
     >
       <a href='#'>
-        <Image width={260} alt='Logo' src={Logo} className='z-20 py-4' />
+        <LogoHeader width={270} alt='Logo' className='z-20 py-4' />
       </a>
 
       <nav>
-        <ul className='flex space-x-6 text-base font-medium'>
+        <ul className='flex space-x-10 text-base font-medium'>
           <Item className='hover:border-greenText  cursor-pointer px-1 py-3 font-normal transition duration-300 hover:border-b-4'>
             About us
           </Item>
