@@ -4,29 +4,29 @@ import MobileApplicationsIcon from 'public/svg/mobile-app-illustration.svg';
 import UIUXIcon from 'public/svg/uxui-design-illustration.svg';
 import * as React from 'react';
 
-import { ServiceItem } from '@/components/ServiceItem';
+import { ServiceItem } from '@/components/Services/ServiceItem';
 const data = [
   {
-    image: <MobileApplicationsIcon className='' width='252px' height='360px' />,
+    image: <MobileApplicationsIcon width='277px' height='360px' />,
     description: 'Mobile Applications',
   },
   {
-    image: <CustomDevelopmentIcon width='252px' height='360px' />,
+    image: <CustomDevelopmentIcon width='277px' height='360px' />,
     description: 'Custom Development',
   },
   {
-    image: <UIUXIcon width='252px' height='360px' />,
+    image: <UIUXIcon width='277px' height='360px' />,
     description: 'UI/UX Design',
   },
 ];
-export default function ContactUs() {
+export const Services = () => {
   return (
     <section>
       <div className='gap-10'>
         <h2 className='border-greenText mb-7 border-s-4 px-3 text-2xl uppercase text-white'>
           Services
         </h2>
-        <p className=' text-6xl font-bold tracking-normal text-white '>
+        <p className='text-6xl font-bold tracking-normal text-white'>
           Areas we cover to <span className='text-greenText'>provide</span> our
           clients with a
           <span className='text-greenText'> complete experience</span>.
@@ -43,4 +43,4 @@ export default function ContactUs() {
       </div>
     </section>
   );
-}
+};

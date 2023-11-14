@@ -4,12 +4,12 @@ import Head from 'next/head';
 import * as React from 'react';
 
 import { BackgroundWeb } from '@/components/backgroundWeb/BackgroundWeb';
-import ContactUs from '@/components/ContactUs';
+import { ContactUs } from '@/components/ContactUs/ContactUs';
 import { Hero } from '@/components/hero/Hero';
 import { HowItWorks } from '@/components/HowItWorks/HowItWorks';
 import { WhoWeAre } from '@/components/HowItWorks/WhoWeAre';
-import Reviews from '@/components/Reviews';
-import Services from '@/components/Services';
+import { Reviews } from '@/components/Reviews/Reviews';
+import { Services } from '@/components/Services/Services';
 import { Technologies } from '@/components/Technologies/Technologies';
 
 // !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
