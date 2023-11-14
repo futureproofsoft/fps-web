@@ -60,7 +60,7 @@ export const NavBar = () => {
   return (
     <header
       style={navStyle}
-      className={` sticky z-30 -mx-20 flex items-center justify-between px-20
+      className={`z-30 -mx-20 flex items-center justify-between px-20
       ${yscale > 0 ? `sticky top-0 transition duration-500` : ''} ${
         showNav && yscale > 0 ? `bg-black/90` : `flash-color `
       } `}
