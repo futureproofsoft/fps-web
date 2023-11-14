@@ -11,7 +11,7 @@ export const Hero = () => {
           an{' '}
           <span className='text-greenText'>extraordinary digital product</span>.
         </h2>
-        <p className='border-greenText mt-4 border-s-4 px-3 text-2xl font-medium '>
+        <p className='border-greenText border-s-4 px-3 text-2xl font-medium '>
           We have the experience, knowledge, and technical know-how to
           <br /> deliver an innovative digital product that will exceed your
           expectations.

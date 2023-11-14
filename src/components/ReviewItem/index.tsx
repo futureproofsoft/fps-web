@@ -38,9 +38,7 @@ export const ReviewItem = ({
           <p className='opacity-1 text-xl '>{title}</p>
         </div>
       </div>
-      <p className='px-10 pb-10 font-sans text-sm text-xl text-white '>
-        {message}
-      </p>
+      <p className='px-10 pb-10 font-sans text-xl text-white '>{message}</p>
     </div>
   );
 };
