@@ -23,13 +23,13 @@ const works = [
 
 export const HowItWorks = () => {
   const [activeElement, setActiveElement] = useState(0);
-  const sectionRef = useRef<HTMLElement | null>(null);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     const handleScroll = () => {
       if (sectionRef.current) {
         const sectionRect = sectionRef.current.getBoundingClientRect();
         const scrollPosition = window.scrollY;
-        const elementHeight = sectionRect.height / (works.length - 1.5);
+        const elementHeight = sectionRect.height; // / (works.length - 2)
         const newActiveElement = Math.floor(
           (scrollPosition - sectionRect.top) / elementHeight
         );
@@ -48,26 +48,24 @@ export const HowItWorks = () => {
   }, []);
 
   return (
-    <section
-      className='flex justify-between py-28 align-middle'
-      ref={sectionRef}
-    >
+    <section className='flex justify-between py-28 align-middle'>
       <div className='flex w-[50%] flex-col justify-between'>
         <h2 className='pb-8 text-6xl font-bold leading-none'>
           How it <span className='text-greenText'>works</span>. Step by step.
         </h2>
-
-        {works.map((worksItem, index) => {
-          return (
-            <WorksItem
-              key={index}
-              itemNumber={`0${index + 1}`}
-              itemName={worksItem.itemName}
-              itemDescription={worksItem.itemDescription}
-              active={activeElement === index}
-            />
-          );
-        })}
+        <div ref={sectionRef}>
+          {works.map((worksItem, index) => {
+            return (
+              <WorksItem
+                key={index}
+                itemNumber={`0${index + 1}`}
+                itemName={worksItem.itemName}
+                itemDescription={worksItem.itemDescription}
+                active={activeElement === index}
+              />
+            );
+          })}
+        </div>
       </div>
       <div className='flex w-2/6'>
         <LogoFps alt='Logo Future Proof Soft' />
