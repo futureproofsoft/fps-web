@@ -7,7 +7,7 @@ import Phone from 'public/svg/phone.svg';
 import Twitter from 'public/svg/twitter.svg';
 import * as React from 'react';
 
-export default function ContactUs() {
+export const ContactUs = () => {
   return (
     <section>
       <div className='my-40 grid grid-cols-2 space-x-10'>
@@ -75,4 +75,4 @@ export default function ContactUs() {
       </div>
     </section>
   );
-}
+};

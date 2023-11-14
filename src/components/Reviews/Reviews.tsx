@@ -2,25 +2,22 @@
 
 import Image from 'next/image';
 import PhonePicture from 'public/images/freestocks-L5DxWLmywmM-unsplash.png';
-import ProfilePicture from 'public/images/pexels-linkedin-sales-navigator-2182970.png';
 import LeftArrow from 'public/svg/left-arrow.svg';
 import RightArrow from 'public/svg/right-arrow.svg';
 import * as React from 'react';
 import { useState } from 'react';
 
-import { ReviewItem } from '@/components/ReviewItem';
+import { ReviewItem } from '@/components/Reviews/ReviewItem';
 
-export default function Reviews() {
+export const Reviews = () => {
   const data = [
     {
-      image: ProfilePicture,
       name: 'Dominic Johnson',
       title: 'CEO/MobileLabs',
       message:
         'MindInventory developed and launched an Android and iOS app from scratch. Additionaly, they provided free support for two months after the launch to ensure bugs and updates were handled smoothly.',
     },
     {
-      image: ProfilePicture,
       name: 'Dominic Johnson',
       title: 'CEO/MobileLabs',
       message:
@@ -53,7 +50,6 @@ export default function Reviews() {
             <ReviewItem
               active={index === currentItemIndex}
               key={index}
-              image={item.image}
               name={item.name}
               title={item.title}
               message={item.message}
@@ -87,4 +83,4 @@ export default function Reviews() {
       </div>
     </section>
   );
-}
+};
