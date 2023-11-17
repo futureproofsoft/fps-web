@@ -1,4 +1,4 @@
-import LogoFps from 'public/svg/LogoFps.svg';
+import { FPSLogo } from "@/components/HowItWorks/FPSLogo";
 import React, { useEffect, useRef, useState } from 'react';
 
 import { WorksItem } from '@/components/HowItWorks/WorksItem';
@@ -68,7 +68,7 @@ export const HowItWorks = () => {
         </div>
       </div>
       <div className='flex w-2/6'>
-        <LogoFps alt='Logo Future Proof Soft' />
+        <FPSLogo outsideFillColor="red"/>
       </div>
     </section>
   );
