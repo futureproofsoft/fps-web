@@ -1,12 +1,15 @@
 interface ItemProps {
   className?: string;
   children: React.ReactNode;
+  href: string;
 }
 
-export const Item: React.FC<ItemProps> = ({ children, className }) => {
+export const Item: React.FC<ItemProps> = ({ children, className, href }) => {
   return (
     <li>
-      <a className={className}>{children}</a>
+      <a href={href} data-te-smooth-scroll-init className={className}>
+        {children}
+      </a>
     </li>
   );
 };
