@@ -8,8 +8,12 @@ import { Item } from '@/components/navbar/Item';
 export const NavBar = () => {
   const [showNav, setShowNav] = React.useState(true);
   const [lastScrollPosition, setLastScrollPosition] = React.useState(0);
+  const [yscale, setYscale] = React.useState(0);
 
   React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setYscale(window.scrollY / window.innerHeight);
+    }
     const handleScroll = () => {
       if (window.scrollY > lastScrollPosition) {
         setShowNav(false);
@@ -45,11 +49,6 @@ export const NavBar = () => {
     }
   });
 
-  let yscale = 0;
-  if (typeof window !== 'undefined') {
-    yscale = window.scrollY / window.innerHeight;
-  }
-
   const navStyle = {
     opacity: showNav ? 1 : 0,
     top: showNav ? 0 : '-100px',
@@ -57,13 +56,17 @@ export const NavBar = () => {
     transitionTimingFunction: 'ease-in-out',
   };
 
+  const ulItemStyle =
+    'hover:border-greenText  cursor-pointer px-1 py-3 font-normal transition duration-300 hover:border-b-4';
+
+  const contactUsStyle =
+    'color-1  btn-hover cursor-pointer rounded-3xl px-8 py-3 font-bold';
+
   return (
     <header
       style={navStyle}
-      className={`z-30 -mx-20 flex items-center justify-between px-20
-      ${yscale > 0 ? `sticky top-0 transition duration-500` : ''} ${
-        showNav && yscale > 0 ? `bg-black/90` : `flash-color `
-      } `}
+      className={`sticky z-30 -mx-20 flex items-center justify-between  px-20
+      ${showNav && yscale > 0 ? `bg-black/90` : `flash-color`} `}
     >
       <a href='#'>
         <LogoHeader width={270} alt='Logo' className='z-20 py-4' />
@@ -71,22 +74,20 @@ export const NavBar = () => {
 
       <nav>
         <ul className='flex space-x-10 text-base font-medium'>
-          <Item className='hover:border-greenText  cursor-pointer px-1 py-3 font-normal transition duration-300 hover:border-b-4'>
+          <Item href='#about-us' className={ulItemStyle}>
             About us
           </Item>
-          <Item className='hover:border-greenText  cursor-pointer px-1 py-3 font-normal transition duration-300 hover:border-b-4'>
+          <Item href='#technologies' className={ulItemStyle}>
             Technologies
           </Item>
-          <Item className='hover:border-greenText  cursor-pointer px-1 py-3 font-normal transition duration-300 hover:border-b-4'>
+          <Item href='#services' className={ulItemStyle}>
             Services
           </Item>
-          <Item className='hover:border-greenText  cursor-pointer px-1 py-3 font-normal transition duration-300 hover:border-b-4'>
+          <Item href='#reviews' className={ulItemStyle}>
             Reviews
           </Item>
-          <Item className='hover:border-greenText  cursor-pointer px-1 py-3 font-normal transition duration-300 hover:border-b-4'>
-            Careers
-          </Item>
-          <Item className='color-1  btn-hover cursor-pointer rounded-3xl px-8 py-3 font-bold'>
+          {/* <Item className={ulItemStyle}>Careers</Item> */}
+          <Item href='#contact-us' className={contactUsStyle}>
             Contact us
           </Item>
         </ul>
@@ -94,3 +95,20 @@ export const NavBar = () => {
     </header>
   );
 };
+
+/*
+ <svg
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 24 24'
+        strokeWidth={1.5}
+        stroke='#8BD8BD'
+        className='h-12 w-12'
+      >
+        <path
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
+        />
+      </svg>
+*/

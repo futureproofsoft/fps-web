@@ -4,7 +4,7 @@ import { TechnologiesItem } from '@/components/Technologies/TechnologiesItem';
 
 export const Technologies = () => {
   return (
-    <div className='py-28'>
+    <section id='technologies' className='py-28'>
       <div>
         <h3 className='border-greenText border-s-4 px-3 text-2xl font-bold tracking-[4.8px]'>
           TECHNOLOGIES
@@ -15,6 +15,6 @@ export const Technologies = () => {
         </h2>
       </div>
       <TechnologiesItem />
-    </div>
+    </section>
   );
 };

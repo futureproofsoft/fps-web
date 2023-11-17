@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export const WhoWeAre = () => {
   return (
-    <div className='py-28'>
+    <section id='about-us' className='py-28'>
       <h3 className='border-greenText border-s-4 px-3 text-xl font-bold tracking-[4.8px]'>
         WHO WE ARE
       </h3>
@@ -19,6 +19,6 @@ export const WhoWeAre = () => {
           a wide spectrum of projects.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
