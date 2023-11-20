@@ -1,6 +1,6 @@
-import LogoFps from 'public/svg/LogoFps.svg';
 import React, { useEffect, useRef, useState } from 'react';
 
+import { FPSLogo } from '@/components/HowItWorks/FPSLogo';
 import { WorksItem } from '@/components/HowItWorks/WorksItem';
 
 const works = [
@@ -24,6 +24,13 @@ const works = [
 export const HowItWorks = () => {
   const [activeElement, setActiveElement] = useState(0);
   const sectionRef = useRef<HTMLDivElement | null>(null);
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       if (sectionRef.current) {
@@ -45,7 +52,7 @@ export const HowItWorks = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [activeElement]);
 
   return (
     <section className='flex justify-between py-28 align-middle'>
@@ -68,7 +75,13 @@ export const HowItWorks = () => {
         </div>
       </div>
       <div className='flex w-2/6'>
-        <LogoFps alt='Logo Future Proof Soft' />
+        {isClient && (
+          <FPSLogo
+            ballFillColor={activeElement >= 0}
+            insideFillColor={activeElement > 0}
+            outsideFillColor={activeElement > 1}
+          />
+        )}
       </div>
     </section>
   );

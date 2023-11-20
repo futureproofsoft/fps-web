@@ -21,7 +21,7 @@ const data = [
 ];
 export const Services = () => {
   return (
-    <section>
+    <section id='services'>
       <div className='gap-10'>
         <h2 className='border-greenText mb-7 border-s-4 px-3 text-2xl uppercase text-white'>
           Services
