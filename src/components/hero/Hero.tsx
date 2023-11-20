@@ -3,7 +3,7 @@ import * as React from 'react';
 
 export const Hero = () => {
   return (
-    <div className='flex items-center justify-between py-28'>
+    <section className='flex items-center justify-between py-28'>
       <div className='animation-slide-left w-1/2'>
         <h2 className='pb-6 text-[68px] font-bold leading-none '>
           Let's turn your <span className='text-greenText'>idea</span> into{' '}
@@ -20,6 +20,6 @@ export const Hero = () => {
       <div className='laptop-shadow animation-slide-right w-5/12 '>
         <Laptop alt='Laptop' />
       </div>
-    </div>
+    </section>
   );
 };

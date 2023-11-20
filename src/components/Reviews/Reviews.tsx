@@ -37,7 +37,7 @@ export const Reviews = () => {
   };
 
   return (
-    <section>
+    <section id='reviews'>
       <div className='my-12 grid grid-cols-3'>
         <div className='prose lg:prose-xl z-10 flex flex-col justify-between'>
           <h3 className='border-s-4 border-green-300 px-3 uppercase tracking-wider text-white'>

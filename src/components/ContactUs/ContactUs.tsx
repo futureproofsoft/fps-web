@@ -9,7 +9,7 @@ import * as React from 'react';
 
 export const ContactUs = () => {
   return (
-    <section>
+    <section id='contact-us'>
       <div className='my-40 grid grid-cols-2 space-x-10'>
         <div className='grid grid-cols-1'>
           <div className='prose lg:prose-xl flex flex-col justify-between'>
