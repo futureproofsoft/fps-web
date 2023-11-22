@@ -16,7 +16,10 @@ export default {
         'custom-gradient': 'linear-gradient(68deg, var(--tw-gradient-stops))',
       },
       fontFamily: {
-        primary: ['Blinker', ...defaultTheme.fontFamily.sans],
+        primary: [
+          'normal normal bold 68px/72px Blinker;',
+          ...defaultTheme.fontFamily.sans,
+        ],
       },
       colors: {
         lightGreen: '#3DAB84',

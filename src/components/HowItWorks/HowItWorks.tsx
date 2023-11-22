@@ -56,11 +56,11 @@ export const HowItWorks = () => {
 
   return (
     <section className='flex justify-between py-28 align-middle'>
-      <div className='flex w-[50%] flex-col justify-between'>
+      <div className='grid-row-2 grid w-[50%]'>
         <h2 className='pb-8 text-6xl font-bold leading-none'>
           How it <span className='text-greenText'>works</span>. Step by step.
         </h2>
-        <div ref={sectionRef}>
+        <div ref={sectionRef} className='flex flex-col justify-between'>
           {works.map((worksItem, index) => {
             return (
               <WorksItem

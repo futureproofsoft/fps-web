@@ -21,7 +21,7 @@ export const ReviewItem = ({
       }`}
     >
       <div className='mb-5 flex flex-row'>
-        <div className='mt-5 flex flex-col px-10 pb-10 font-sans text-sm text-xl text-white '>
+        <div className='mt-5 flex flex-col px-10 pb-10 font-sans text-xl text-white '>
           <p className='opacity-1 text-[28px] font-bold'>{name}</p>
           <p className='opacity-1 text-xl '>{title}</p>
         </div>
