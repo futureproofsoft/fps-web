@@ -32,38 +32,38 @@
 <polygon class="cls-10" points="369.25 843.55 554.6 737.22 554.6 198.95 634.54 153.15 634.59 783.07 369.25 936.22 369.25 843.55"/>
 
 <circle id="Ellipse_10-2" cy="5" data-name="Ellipse 10-2" class="cls-11" r="14">
-  <animate attributeName="visibility" dur="10s" repeatCount="indefinite" 
-      keyTimes="0;0.1;0.4;1" 
+  <animate attributeName="visibility" dur="10s" repeatCount="indefinite"
+      keyTimes="0;0.1;0.4;1"
       values="visible;hidden;visible;hidden"/>
-  <animateMotion dur="10s" repeatCount="indefinite" path="M741,453.8 
+  <animateMotion dur="10s" repeatCount="indefinite" path="M741,453.8
            A 370.5 200 0 1 0 0,453.8
            A 370.5 200 0 1 0 741,453.8" >
     </animateMotion>
   </circle>
 <circle id="Ellipse_10-2-1" cy="5" data-name="Ellipse 10-2" class="cls-11" r="14">
-  <animate attributeName="visibility"  dur="10s" repeatCount="indefinite" 
-     keyTimes="0;0.6;0.9;1" 
+  <animate attributeName="visibility"  dur="10s" repeatCount="indefinite"
+     keyTimes="0;0.6;0.9;1"
       values="visible;hidden;visible;hidden"/>
-  <animateMotion dur="10s" begin="-5s" repeatCount="indefinite" path="M741,453.8 
+  <animateMotion dur="10s" begin="-5s" repeatCount="indefinite" path="M741,453.8
            A 370.5 200 0 1 0 0,453.8
            A 370.5 200 0 1 0 741,453.8" >
     </animateMotion>
   </circle>
 
   <circle id="Ellipse_10-2" cy="177" data-name="Ellipse 10-2" class="cls-11" r="14">
-  <animate attributeName="visibility" dur="10s" repeatCount="indefinite" 
-      keyTimes="0;0.1;0.4;1" 
+  <animate attributeName="visibility" dur="10s" repeatCount="indefinite"
+      keyTimes="0;0.1;0.4;1"
       values="visible;hidden;visible;hidden"/>
-  <animateMotion dur="10s" repeatCount="indefinite" path="M741,453.8 
+  <animateMotion dur="10s" repeatCount="indefinite" path="M741,453.8
            A 370.5 200 0 1 0 0,453.8
            A 370.5 200 0 1 0 741,453.8" >
     </animateMotion>
   </circle>
 <circle fill="red" id="Ellipse_10-2-1" cy="177" data-name="Ellipse 10-2" class="cls-11" r="14">
-  <animate attributeName="visibility" dur="10s" repeatCount="indefinite" 
-     keyTimes="0;0.6;0.9;1" 
+  <animate attributeName="visibility" dur="10s" repeatCount="indefinite"
+     keyTimes="0;0.6;0.9;1"
       values="visible;hidden;visible;hidden"/>
-  <animateMotion dur="10s" begin="-5s" repeatCount="indefinite" path="M741,453.8 
+  <animateMotion dur="10s" begin="-5s" repeatCount="indefinite" path="M741,453.8
            A 370.5 200 0 1 0 0,453.8
            A 370.5 200 0 1 0 741,453.8" >
     </animateMotion>

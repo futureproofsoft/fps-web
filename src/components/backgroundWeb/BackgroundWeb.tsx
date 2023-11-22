@@ -5,7 +5,12 @@ import * as React from 'react';
 export const BackgroundWeb = () => {
   return (
     <div className='flash absolute left-0 top-0 w-full'>
-      <Image src={backgroundWeb} alt='Background Web image' width={1040} />
+      <Image
+        src={backgroundWeb}
+        alt='Background Web image'
+        priority
+        width={1040}
+      />
     </div>
   );
 };
