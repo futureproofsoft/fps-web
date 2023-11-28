@@ -4,7 +4,7 @@ import { TechnologiesItem } from '@/components/Technologies/TechnologiesItem';
 
 export const Technologies = () => {
   return (
-    <section id='technologies' className='py-28'>
+    <section id='technologies' className='py-60'>
       <div>
         <h3 className='border-greenText border-s-4 px-3 text-2xl font-bold tracking-[4.8px]'>
           TECHNOLOGIES

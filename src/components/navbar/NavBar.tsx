@@ -57,7 +57,7 @@ export const NavBar = () => {
   };
 
   const ulItemStyle =
-    'hover:border-greenText  cursor-pointer px-1 py-3 font-normal transition duration-300 hover:border-b-4';
+    'hover:border-greenText cursor-pointer  px-1 py-3 transition duration-300 hover:border-b-4';
 
   const contactUsStyle =
     'color-1  btn-hover cursor-pointer rounded-3xl px-8 py-3 font-bold';
@@ -73,7 +73,7 @@ export const NavBar = () => {
       </a>
 
       <nav>
-        <ul className='flex space-x-10 text-base font-medium'>
+        <ul className='flex space-x-[50px] text-base font-medium'>
           <Item href='#about-us' className={ulItemStyle}>
             About us
           </Item>
