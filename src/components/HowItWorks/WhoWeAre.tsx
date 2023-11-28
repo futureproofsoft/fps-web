@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export const WhoWeAre = () => {
   return (
-    <section id='about-us' className='py-28'>
+    <section id='about-us' className='py-28 pt-44'>
       <h3 className='border-greenText border-s-4 px-3 text-xl font-bold tracking-[4.8px]'>
         WHO WE ARE
       </h3>
