@@ -4,7 +4,6 @@ import Image from 'next/image';
 import PhonePicture from 'public/images/freestocks-L5DxWLmywmM-unsplash.png';
 import Arrow from 'public/svg/Arrow.svg';
 import * as React from 'react';
-import { useState } from 'react';
 
 import { ReviewItem } from '@/components/Reviews/ReviewItem';
 
@@ -35,17 +34,11 @@ export const Reviews = () => {
     //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eros eu ligula hendrerit ullamcorper. Aliquam id urna ut elit condimentum efficitur. Cras eget efficitur enim. Integer non massa ligula.',
     // },
   ];
-  const [currentItemIndex, setCurrentItemIndex] = useState(0);
-  const nextItem = () => {
-    const isLastItem = currentItemIndex === data.length - 1;
-    const newIndex = isLastItem ? 0 : currentItemIndex + 1;
-    setCurrentItemIndex(newIndex);
-  };
+  const [[page, direction], setPage] = React.useState([0, 0]);
+  const imageIndex = ((page % data.length) + data.length) % data.length;
 
-  const prevItem = () => {
-    const isFirstItem = currentItemIndex === 0;
-    const newIndex = isFirstItem ? data.length - 1 : currentItemIndex - 1;
-    setCurrentItemIndex(newIndex);
+  const paginate = (newDirection: number) => {
+    setPage([page + newDirection, newDirection]);
   };
 
   return (
@@ -59,24 +52,25 @@ export const Reviews = () => {
             How <span className='text-greenText'>our clients</span> see us.
           </h2>
           {/* <div className='flex'> */}
-          {data.map((item, index) => (
+          <div className='relative'>
             <ReviewItem
-              active={index === currentItemIndex}
-              key={index}
-              name={item.name}
-              title={item.title}
-              message={item.message}
+              key={page} // Use index as the key, which is unique for each item
+              name={data[imageIndex].name}
+              title={data[imageIndex].title}
+              message={data[imageIndex].message}
+              active={true}
+              paginate={paginate}
+              direction={direction}
             />
-          ))}
-          {/* </div> */}
+          </div>
           <div className='flex gap-[18px]'>
             <Arrow
-              onClick={prevItem}
+              onClick={() => paginate(1)}
               width='50px'
               className='border-greenText rotate-180 rounded-full border-[1.5px] hover:cursor-pointer'
             />
             <Arrow
-              onClick={nextItem}
+              onClick={() => paginate(-1)}
               width='50px'
               className='border-greenText rounded-full border-[1.5px] hover:cursor-pointer'
             />
