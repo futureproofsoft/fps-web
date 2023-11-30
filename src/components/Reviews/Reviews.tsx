@@ -21,18 +21,18 @@ export const Reviews = () => {
       message:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eros eu ligula hendrerit ullamcorper. Aliquam id urna ut elit condimentum efficitur. Cras eget efficitur enim. Integer non massa ligula.',
     },
-    // {
-    //   name: 'Tamara',
-    //   title: 'CEO/MobileLabs',
-    //   message:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eros eu ligula hendrerit ullamcorper. Aliquam id urna ut elit condimentum efficitur. Cras eget efficitur enim. Integer non massa ligula.',
-    // },
-    // {
-    //   name: 'Voja',
-    //   title: 'CEO/MobileLabs',
-    //   message:
-    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eros eu ligula hendrerit ullamcorper. Aliquam id urna ut elit condimentum efficitur. Cras eget efficitur enim. Integer non massa ligula.',
-    // },
+    {
+      name: 'Tamara',
+      title: 'CEO/MobileLabs',
+      message:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eros eu ligula hendrerit ullamcorper. Aliquam id urna ut elit condimentum efficitur. Cras eget efficitur enim. Integer non massa ligula.',
+    },
+    {
+      name: 'Voja',
+      title: 'CEO/MobileLabs',
+      message:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eros eu ligula hendrerit ullamcorper. Aliquam id urna ut elit condimentum efficitur. Cras eget efficitur enim. Integer non massa ligula.',
+    },
   ];
   const [[page, direction], setPage] = React.useState([0, 0]);
   const imageIndex = ((page % data.length) + data.length) % data.length;
@@ -45,16 +45,16 @@ export const Reviews = () => {
     <section id='reviews' className='3xl:py-36 2xl:py-28'>
       <div className='flex'>
         <div className='z-10 flex w-[42%] flex-col justify-between'>
-          <h3 className='border-greenText 3xl:text-2xl border-s-4 px-3 font-bold tracking-[4.8px] 2xl:text-xl'>
+          <h3 className='border-greenText 3xl:text-2xl border-s-4 px-3 font-bold tracking-[4.8px] 2xl:text-lg'>
             REVIEWS
           </h3>
+
           <h2 className='3xl:text-6xl font-bold leading-[64px] 2xl:text-[44px]'>
             How <span className='text-greenText'>our clients</span> see us.
           </h2>
-          {/* <div className='flex'> */}
           <div className='relative'>
             <ReviewItem
-              key={page} // Use index as the key, which is unique for each item
+              key={page}
               name={data[imageIndex].name}
               title={data[imageIndex].title}
               message={data[imageIndex].message}
@@ -66,13 +66,11 @@ export const Reviews = () => {
           <div className='flex gap-[18px]'>
             <Arrow
               onClick={() => paginate(1)}
-              width='50px'
-              className='border-greenText rotate-180 rounded-full border-[1.5px] hover:cursor-pointer'
+              className='border-greenText 3xl:w-[50px] rotate-180 rounded-full border-[1.5px] hover:cursor-pointer 2xl:w-[40px]'
             />
             <Arrow
               onClick={() => paginate(-1)}
-              width='50px'
-              className='border-greenText rounded-full border-[1.5px] hover:cursor-pointer'
+              className='border-greenText 3xl:w-[50px] rounded-full border-[1.5px] hover:cursor-pointer 2xl:w-[40px]'
             />
           </div>
         </div>

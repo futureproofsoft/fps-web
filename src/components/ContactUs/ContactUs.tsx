@@ -12,7 +12,7 @@ export const ContactUs = () => {
     <section id='contact-us' className='3xl:py-36 2xl:py-28'>
       <div className='grid grid-cols-[1.6fr,1fr,1fr]  '>
         <div className='flex flex-col justify-between  pr-48'>
-          <h3 className='border-greenText 3xl:text-2xl border-s-4 px-3 font-bold tracking-[4.8px] 2xl:text-xl'>
+          <h3 className='border-greenText 3xl:text-2xl border-s-4 px-3 font-bold tracking-[4.8px] 2xl:text-lg'>
             CONTACT US
           </h3>
           <h2 className='3xl:text-6xl font-bold leading-[64px] 2xl:text-[44px] 2xl:leading-[44px]'>

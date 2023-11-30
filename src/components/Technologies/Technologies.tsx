@@ -6,7 +6,7 @@ export const Technologies = () => {
   return (
     <section id='technologies' className='3xl:py-36 2xl:py-28'>
       <div>
-        <h3 className='border-greenText 3xl:text-2xl border-s-4 px-3 font-bold tracking-[4.8px] 2xl:text-xl'>
+        <h3 className='border-greenText 3xl:text-2xl border-s-4 px-3 font-bold tracking-[4.8px] 2xl:text-lg'>
           TECHNOLOGIES
         </h3>
         <h2 className='3xl:text-6xl pb-20 pt-7 font-bold leading-none tracking-normal 2xl:text-[44px]'>
