@@ -3,7 +3,7 @@ import * as React from 'react';
 export const WhoWeAre = () => {
   return (
     <section id='about-us' className='3xl:py-36 2xl:pb-16 2xl:pt-28'>
-      <h3 className='border-greenText 3xl:text-xl border-s-4 px-3  font-bold tracking-[4.8px] 2xl:text-lg'>
+      <h3 className='border-greenText 3xl:text-2xl border-s-4 px-3 font-bold tracking-[4.8px] 2xl:text-xl'>
         WHO WE ARE
       </h3>
       <div className='flex justify-between py-7'>

@@ -3,7 +3,7 @@ import * as React from 'react';
 
 export const Hero = () => {
   return (
-    <section className='3xl:py-60 flex items-center justify-between 2xl:py-20'>
+    <section className='3xl:py-36 flex items-center justify-between 2xl:py-20'>
       <div className='animation-slide-left w-1/2'>
         <h2 className='3xl:text-[68px] pb-6 font-bold leading-none 2xl:text-[55px]'>
           Let's turn your <span className='text-greenText'>idea</span> into{' '}
