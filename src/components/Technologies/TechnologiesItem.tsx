@@ -6,11 +6,23 @@ import nodejsTechnologiesIcon from 'public/images/technologies/nodejsTechologies
 import * as React from 'react';
 
 const technologiesClassName =
-  'flex justify-center my-20 transition duration-300 hover:scale-125';
+  'flex justify-center 2xl:my-12 transition duration-300 3xl:hover:scale-125 2xl:hover:scale-[1.15]';
 
 export const TechnologiesItem = () => {
   return (
-    <div className='grid grid-cols-4 gap-[18px]'>
+    <div className='sc grid grid-cols-4 gap-[18px]'>
+      <div className={technologiesClassName}>
+        <Image src={cssTechnologiesIcon} alt='html logo' />
+      </div>
+      <div className={technologiesClassName}>
+        <Image src={htmlTechnologiesIcon} alt='css logo' />
+      </div>
+      <div className={technologiesClassName}>
+        <Image src={jsTechnologiesIcon} alt='js logo' />
+      </div>
+      <div className={technologiesClassName}>
+        <Image src={nodejsTechnologiesIcon} alt='nodejs logo' />
+      </div>
       <div className={technologiesClassName}>
         <Image src={cssTechnologiesIcon} alt='html logo' />
       </div>
