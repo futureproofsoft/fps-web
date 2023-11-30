@@ -41,11 +41,11 @@ const data = [
 
 export const Services = () => {
   return (
-    <section id='services' className='py-60'>
-      <h3 className='border-greenText border-s-4 px-3 text-2xl font-bold tracking-[4.8px]'>
+    <section id='services' className='3xl:py-36 2xl:py-28'>
+      <h3 className='border-greenText 3xl:text-2xl border-s-4 px-3 font-bold tracking-[4.8px] 2xl:text-xl'>
         SERVICES
       </h3>
-      <h2 className='pb-[100px] pt-7 text-6xl font-bold leading-none tracking-normal'>
+      <h2 className='3xl:pb-[100px] 3xl:text-6xl pt-7 font-bold leading-none tracking-normal 2xl:pb-[70px] 2xl:text-[44px]'>
         Areas we cover to <span className='text-greenText'>provide</span> our
         clients with a{' '}
         <span className='text-greenText'>complete experience</span>.

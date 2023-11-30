@@ -36,7 +36,7 @@ export const HowItWorks = () => {
       if (sectionRef.current) {
         const sectionRect = sectionRef.current.getBoundingClientRect();
         const scrollPosition = window.scrollY;
-        const elementHeight = sectionRect.height; // / (works.length - 2)
+        const elementHeight = sectionRect.height / (works.length - 2);
         const newActiveElement = Math.floor(
           (scrollPosition - sectionRect.top) / elementHeight
         );
@@ -55,9 +55,9 @@ export const HowItWorks = () => {
   }, [activeElement]);
 
   return (
-    <section className='flex justify-between py-16 align-middle'>
+    <section className='flex justify-between align-middle 2xl:py-16'>
       <div className='grid-row-2 grid w-[50%]'>
-        <h2 className='pb-8 text-6xl font-bold leading-none'>
+        <h2 className='3xl:text-6xl 3xl:pb-32 font-bold leading-none 2xl:pb-8 2xl:text-[44px]'>
           How it <span className='text-greenText'>works</span>. Step by step.
         </h2>
         <div ref={sectionRef} className='flex flex-col justify-between'>
