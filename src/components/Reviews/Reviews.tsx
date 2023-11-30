@@ -42,14 +42,14 @@ export const Reviews = () => {
   };
 
   return (
-    <section id='reviews' className='3xl:py-36 2xl:py-28'>
+    <section id='reviews' className='3xl:py-36 xl:py-28'>
       <div className='flex'>
         <div className='z-10 flex w-[42%] flex-col justify-between'>
-          <h3 className='border-greenText 3xl:text-2xl border-s-4 px-3 font-bold tracking-[4.8px] 2xl:text-lg'>
+          <h3 className='border-greenText 3xl:text-2xl border-s-4 px-3 font-bold tracking-[4.8px] xl:text-lg'>
             REVIEWS
           </h3>
 
-          <h2 className='3xl:text-6xl font-bold leading-[64px] 2xl:text-[44px]'>
+          <h2 className='3xl:text-6xl 3xl:leading-[64px] font-bold  xl:text-[40px]  xl:leading-[46px] 2xl:text-[44px]'>
             How <span className='text-greenText'>our clients</span> see us.
           </h2>
           <div className='relative'>
@@ -66,11 +66,11 @@ export const Reviews = () => {
           <div className='flex gap-[18px]'>
             <Arrow
               onClick={() => paginate(1)}
-              className='border-greenText 3xl:w-[50px] rotate-180 rounded-full border-[1.5px] hover:cursor-pointer 2xl:w-[40px]'
+              className='border-greenText 3xl:w-[50px] rotate-180 rounded-full border-[1.5px] hover:cursor-pointer xl:w-[40px]'
             />
             <Arrow
               onClick={() => paginate(-1)}
-              className='border-greenText 3xl:w-[50px] rounded-full border-[1.5px] hover:cursor-pointer 2xl:w-[40px]'
+              className='border-greenText 3xl:w-[50px] rounded-full border-[1.5px] hover:cursor-pointer xl:w-[40px]'
             />
           </div>
         </div>

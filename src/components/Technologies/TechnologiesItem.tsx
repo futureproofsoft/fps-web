@@ -6,7 +6,7 @@ import nodejsTechnologiesIcon from 'public/images/technologies/nodejsTechologies
 import * as React from 'react';
 
 const technologiesClassName =
-  'flex justify-center 2xl:my-12 transition duration-300 3xl:hover:scale-125 2xl:hover:scale-[1.15]';
+  'flex justify-center xl:my-12 transition duration-300 3xl:hover:scale-125 xl:hover:scale-[1.15]';
 
 export const TechnologiesItem = () => {
   return (

@@ -3,9 +3,9 @@ import * as React from 'react';
 
 export const Hero = () => {
   return (
-    <section className='3xl:py-36 flex items-center justify-between 2xl:py-20'>
+    <section className='3xl:py-36 flex items-center justify-between xl:py-20'>
       <div className='animation-slide-left w-1/2'>
-        <h2 className='3xl:text-[68px] pb-6 font-bold leading-none 2xl:text-[55px]'>
+        <h2 className='3xl:text-[68px] pb-6 font-bold leading-none xl:text-[50px]  2xl:text-[55px]'>
           Let's turn your <span className='text-greenText'>idea</span> into{' '}
           <br />
           an{' '}
@@ -15,7 +15,7 @@ export const Hero = () => {
           </span>
           .
         </h2>
-        <p className='border-greenText 3xl:text-2xl border-s-4 px-3 leading-[30px] 2xl:text-lg '>
+        <p className='border-greenText 3xl:text-2xl border-s-4 px-3 xl:leading-[20px] 2xl:text-lg 2xl:leading-[30px] '>
           We have the experience, knowledge, and technical know-how to
           <br /> deliver an innovative digital product that will exceed your
           expectations.
