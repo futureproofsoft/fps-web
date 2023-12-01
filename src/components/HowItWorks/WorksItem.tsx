@@ -23,17 +23,17 @@ export const WorksItem: React.FC<WorksProps> = ({
       }`}
     >
       {itemNumber && (
-        <h4 className='3xl:text-[32px] border-r-2 border-white pr-2 font-bold leading-none xl:text-[26px] '>
+        <h4 className='3xl:text-[32px] border-r-2 border-white pr-2 font-bold leading-none lg:text-[20px] xl:text-[26px] '>
           {itemNumber}
         </h4>
       )}
       {itemName && (
         <div className='flex flex-col gap-4 pl-6'>
-          <h4 className='text-greenText 3xl:text-[32px] font-bold leading-none xl:text-[26px]'>
+          <h4 className='text-greenText 3xl:text-[32px] font-bold leading-none lg:text-[20px] xl:text-[26px]'>
             {itemName}
           </h4>
           {itemDescription && (
-            <p className='3xl:text-xl font-normal xl:text-base'>
+            <p className='3xl:text-xl font-normal lg:text-xs xl:text-base'>
               {itemDescription}
             </p>
           )}
