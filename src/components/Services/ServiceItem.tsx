@@ -8,10 +8,10 @@ export type ServiceItemProps = {
 export const ServiceItem = ({ image, description }: ServiceItemProps) => {
   return (
     <div className='border-greenText rounded-3xl border-[3px]'>
-      <div className=' my-20 flex justify-center align-middle xl:my-16'>
+      <div className='flex justify-center align-middle lg:my-10 2xl:my-20'>
         {image}
       </div>
-      <div className='border-greenText 3xl:text-5xl mx-14 my-[52px] border-s-4  px-[26px] font-bold  leading-[52px] xl:text-3xl 2xl:text-4xl'>
+      <div className='border-greenText 3xl:text-5xl border-s-4 font-bold lg:mx-8 lg:my-[26px] lg:px-[20px] lg:text-2xl  xl:text-3xl 2xl:mx-14  2xl:my-[52px] 2xl:px-[26px] 2xl:text-4xl 2xl:leading-[52px]'>
         {description}
       </div>
     </div>

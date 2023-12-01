@@ -57,26 +57,26 @@ export const NavBar = () => {
   };
 
   const ulItemStyle =
-    'hover:border-greenText cursor-pointer  xl:px-1 xl:py-3 2xl:py-2 transition duration-300 hover:border-b-4';
+    'hover:border-greenText cursor-pointer lg:text-[12px] xl:text-base lg:px-1 lg:py-3 2xl:py-2 transition duration-300 hover:border-b-4';
 
   const contactUsStyle =
-    'color-1  btn-hover cursor-pointer rounded-3xl 2xl:px-8 2xl:py-3 xl:px-6 xl:py-2 font-bold';
+    'color-1  btn-hover cursor-pointer lg:text-[12px] xl:text-base rounded-3xl 2xl:px-8 2xl:py-3 font-bold lg:py-2 lg:px-6';
 
   return (
     <header
       style={navStyle}
-      className={`sticky z-30 -mx-36 flex items-center justify-between px-36 xl:-mx-20  xl:px-20   2xl:-mx-28  2xl:px-28
+      className={`3xl:px-36 sticky z-30 -mx-36 flex items-center justify-between lg:-mx-16 lg:px-16  xl:-mx-20   xl:px-20  2xl:-mx-28 2xl:px-28
       ${showNav && yscale > 0 ? `bg-black/90` : `flash-color`} `}
     >
       <a href='#'>
         <LogoHeader
           alt='Logo'
-          className='z-20 w-[270px] py-4 xl:w-[200px] 2xl:w-[220px]'
+          className='z-20 w-[270px] py-4 lg:w-[180px] xl:w-[200px] 2xl:w-[220px]'
         />
       </a>
 
       <nav>
-        <ul className='3xl:text-base flex space-x-[50px] font-medium xl:space-x-[35px]  xl:text-sm'>
+        <ul className='3xl:text-base 3xl:space-x-[50px] flex font-medium lg:space-x-[20px] xl:space-x-[35px]  xl:text-sm'>
           <Item href='#about-us' className={ulItemStyle}>
             About us
           </Item>
