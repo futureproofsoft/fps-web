@@ -49,7 +49,7 @@ export const Reviews = () => {
             REVIEWS
           </h3>
 
-          <h2 className='3xl:text-6xl 3xl:leading-[64px] font-bold  xl:text-[40px]  xl:leading-[46px] 2xl:text-[44px]'>
+          <h2 className='3xl:text-6xl 3xl:leading-[64px] font-bold  xl:text-[38px]  xl:leading-[46px] 2xl:text-[44px]'>
             How <span className='text-greenText'>our clients</span> see us.
           </h2>
           <div className='relative'>

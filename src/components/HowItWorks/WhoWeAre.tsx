@@ -7,7 +7,7 @@ export const WhoWeAre = () => {
         WHO WE ARE
       </h3>
       <div className='flex justify-between py-7'>
-        <h2 className='3xl:text-6xl w-1/2 pb-8 font-bold leading-none xl:text-[40px]  2xl:text-[44px]'>
+        <h2 className='3xl:text-6xl w-1/2 pb-8 font-bold leading-none xl:text-[38px]  2xl:text-[44px]'>
           Your <span className='text-greenText'>digital partner</span> to create
           <br /> a <span className='text-greenText'>recognizable</span> brand.
         </h2>

@@ -6,34 +6,66 @@ import nodejsTechnologiesIcon from 'public/images/technologies/nodejsTechologies
 import * as React from 'react';
 
 const technologiesClassName =
-  'flex justify-center xl:my-12 transition duration-300 3xl:hover:scale-125 xl:hover:scale-[1.15]';
+  'flex justify-center xl:my-6 2xl:my-12 transition duration-300 3xl:hover:scale-125 2xl:hover:scale-[1.15]';
 
 export const TechnologiesItem = () => {
   return (
-    <div className='sc grid grid-cols-4 gap-[18px]'>
+    <div className='grid grid-cols-4 gap-[18px]'>
       <div className={technologiesClassName}>
-        <Image src={cssTechnologiesIcon} alt='html logo' />
+        <Image
+          src={cssTechnologiesIcon}
+          alt='html logo'
+          className='xl:p-2 2xl:p-1'
+        />
       </div>
       <div className={technologiesClassName}>
-        <Image src={htmlTechnologiesIcon} alt='css logo' />
+        <Image
+          src={htmlTechnologiesIcon}
+          alt='css logo'
+          className='xl:p-2 2xl:p-1'
+        />
       </div>
       <div className={technologiesClassName}>
-        <Image src={jsTechnologiesIcon} alt='js logo' />
+        <Image
+          src={jsTechnologiesIcon}
+          alt='js logo'
+          className='xl:p-2 2xl:p-1'
+        />
       </div>
       <div className={technologiesClassName}>
-        <Image src={nodejsTechnologiesIcon} alt='nodejs logo' />
+        <Image
+          src={nodejsTechnologiesIcon}
+          alt='nodejs logo'
+          className='xl:p-2 2xl:p-1'
+        />
       </div>
       <div className={technologiesClassName}>
-        <Image src={cssTechnologiesIcon} alt='html logo' />
+        <Image
+          src={cssTechnologiesIcon}
+          alt='html logo'
+          className='xl:p-2 2xl:p-1'
+        />
       </div>
       <div className={technologiesClassName}>
-        <Image src={htmlTechnologiesIcon} alt='css logo' />
+        <Image
+          src={htmlTechnologiesIcon}
+          alt='css logo'
+          className='xl:p-2 2xl:p-1'
+        />
       </div>
       <div className={technologiesClassName}>
-        <Image src={jsTechnologiesIcon} alt='js logo' />
+        <Image
+          src={jsTechnologiesIcon}
+          alt='js logo'
+          className='xl:p-2 2xl:p-1'
+        />
       </div>
       <div className={technologiesClassName}>
-        <Image src={nodejsTechnologiesIcon} alt='nodejs logo' />
+        <Image
+          src={nodejsTechnologiesIcon}
+          alt='nodejs logo'
+          className='xl:p-2 2xl:p-1'
+        />
       </div>
     </div>
   );
