@@ -9,7 +9,7 @@ export const BackgroundWeb = () => {
         src={backgroundWeb}
         alt='Background Web image'
         priority
-        width={1040}
+        className='w-1/2'
       />
     </div>
   );

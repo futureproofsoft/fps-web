@@ -55,9 +55,9 @@ export const HowItWorks = () => {
   }, [activeElement]);
 
   return (
-    <section className='flex justify-between align-middle 2xl:py-16'>
+    <section className='flex justify-between align-middle xl:py-12 2xl:py-16'>
       <div className='grid-row-2 grid w-[50%]'>
-        <h2 className='3xl:text-6xl 3xl:pb-32 font-bold leading-none 2xl:pb-8 2xl:text-[44px]'>
+        <h2 className='3xl:text-6xl 3xl:pb-32 font-bold leading-none xl:pb-8 xl:text-[38px] 2xl:text-[44px]'>
           How it <span className='text-greenText'>works</span>. Step by step.
         </h2>
         <div ref={sectionRef} className='flex flex-col justify-between'>
