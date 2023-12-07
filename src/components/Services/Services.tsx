@@ -42,10 +42,10 @@ const data = [
 export const Services = () => {
   return (
     <section id='services' className='3xl:py-36  lg:py-20 xl:py-28 '>
-      <h5 className='border-greenText 3xl:text-2xl border-s-4 px-3 font-bold tracking-[4.8px] xl:text-lg'>
+      <h5 className='border-greenText 3xl:text-2xl  border-s-4 px-3 font-bold tracking-[4.8px] md:text-sm xl:text-lg'>
         SERVICES
       </h5>
-      <h2 className='3xl:text-6xl font-bold leading-none tracking-normal lg:pb-14 lg:pt-5 xl:text-[38px] 2xl:pb-20 2xl:pt-7 2xl:text-[44px]'>
+      <h2 className='3xl:text-6xl  font-bold  tracking-normal md:pb-5 md:pt-2 md:text-2xl md:leading-none lg:pb-14 lg:pt-5 xl:text-[38px] 2xl:pb-20 2xl:pt-7 2xl:text-[44px]'>
         Areas we cover to <span className='text-greenText'>provide</span> our
         clients with a{' '}
         <span className='text-greenText'>complete experience</span>.

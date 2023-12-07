@@ -55,9 +55,9 @@ export const HowItWorks = () => {
   }, [activeElement]);
 
   return (
-    <section className='flex justify-between align-middle xl:py-12 2xl:py-16'>
-      <div className='grid-row-2 grid w-[50%]'>
-        <h2 className='3xl:text-6xl 3xl:pb-32 font-bold leading-none lg:text-[30px] xl:pb-8  xl:text-[38px] 2xl:text-[44px]'>
+    <section className='flex justify-between align-middle md:flex-col lg:flex-row lg:py-6 2xl:py-8'>
+      <div className='grid-row-2 grid md:w-full lg:w-[50%]'>
+        <h2 className='3xl:text-6xl 3xl:pb-32 font-bold leading-none  md:pb-5  md:pt-10 md:text-2xl lg:text-[30px] xl:pb-8  xl:text-[38px] 2xl:text-[44px]'>
           How it <span className='text-greenText'>works</span>. Step by step.
         </h2>
         <div ref={sectionRef} className='flex flex-col justify-between'>
@@ -74,7 +74,7 @@ export const HowItWorks = () => {
           })}
         </div>
       </div>
-      <div className='flex w-2/6'>
+      <div className='flex md:hidden lg:flex lg:w-2/6'>
         {isClient && (
           <FPSLogo
             ballFillColor={activeElement >= 0}

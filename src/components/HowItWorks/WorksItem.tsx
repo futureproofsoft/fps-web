@@ -33,7 +33,7 @@ export const WorksItem: React.FC<WorksProps> = ({
             {itemName}
           </h4>
           {itemDescription && (
-            <p className='3xl:text-xl font-normal lg:text-xs xl:text-base'>
+            <p className='3xl:text-xl font-normal md:text-sm lg:text-xs xl:text-base'>
               {itemDescription}
             </p>
           )}

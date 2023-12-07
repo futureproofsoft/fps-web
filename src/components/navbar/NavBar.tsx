@@ -1,14 +1,25 @@
 'use client';
 
+import Close from 'public/svg/close.svg';
 import LogoHeader from 'public/svg/LogoHeader.svg';
+import MenuBar from 'public/svg/menu.svg';
 import * as React from 'react';
 
-import { Item } from '@/components/navbar/Item';
+import { NavLists } from '@/components/navbar/NavLists';
 
 export const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [showNav, setShowNav] = React.useState(true);
   const [lastScrollPosition, setLastScrollPosition] = React.useState(0);
   const [yscale, setYscale] = React.useState(0);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   React.useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -17,6 +28,7 @@ export const NavBar = () => {
     const handleScroll = () => {
       if (window.scrollY > lastScrollPosition) {
         setShowNav(false);
+        closeMenu();
       } else {
         setShowNav(true);
       }
@@ -49,6 +61,22 @@ export const NavBar = () => {
     }
   });
 
+  React.useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+
+      if (isMenuOpen && !target.closest('header')) {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener('click', handleOutsideClick);
+
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+    };
+  }, [isMenuOpen]);
+
   const navStyle = {
     opacity: showNav ? 1 : 0,
     top: showNav ? 0 : '-100px',
@@ -56,44 +84,49 @@ export const NavBar = () => {
     transitionTimingFunction: 'ease-in-out',
   };
 
-  const ulItemStyle =
-    'hover:border-greenText cursor-pointer lg:text-[12px] xl:text-base lg:px-1 lg:py-3 2xl:py-2 transition duration-300 hover:border-b-4';
-
-  const contactUsStyle =
-    'color-1  btn-hover cursor-pointer lg:text-[12px] xl:text-base rounded-3xl 2xl:px-8 2xl:py-3 font-bold lg:py-2 lg:px-6';
-
   return (
-    <header
-      style={navStyle}
-      className={`3xl:px-36 sticky z-30 -mx-36 flex items-center justify-between lg:-mx-16 lg:px-16  xl:-mx-20   xl:px-20  2xl:-mx-28 2xl:px-28
-      ${showNav && yscale > 0 ? `bg-black/90` : `flash-color`} `}
-    >
-      <a href='#'>
-        <LogoHeader
-          alt='Logo'
-          className='z-20 w-[270px] py-4 lg:w-[180px] xl:w-[200px] 2xl:w-[220px]'
-        />
-      </a>
+    <>
+      <header
+        style={navStyle}
+        className={`${
+          isMenuOpen ? 'md:bg-black/90 lg:hidden' : ''
+        } 3xl:px-36 md:grid-row-2 sticky z-30 -mx-36 items-center  justify-between md:-mx-12 md:grid md:grid-cols-1 md:px-12 lg:-mx-16 lg:flex lg:px-16  xl:-mx-20   xl:px-20  2xl:-mx-28 2xl:px-28
+        ${showNav && yscale > 0 ? `bg-black/90` : `flash-color`} `}
+      >
+        <div className='z-20 flex justify-between'>
+          <a href='#' onClick={closeMenu}>
+            <LogoHeader
+              alt='Logo'
+              className='3xl:w-[270px] z-20 py-4  md:w-[140px] lg:w-[180px] xl:w-[200px] 2xl:w-[220px]'
+            />
+          </a>
 
-      <nav>
-        <ul className='3xl:text-base 3xl:space-x-[50px] flex font-medium lg:space-x-[20px] xl:space-x-[35px]  xl:text-sm'>
-          <Item href='#about-us' className={ulItemStyle}>
-            About us
-          </Item>
-          <Item href='#technologies' className={ulItemStyle}>
-            Technologies
-          </Item>
-          <Item href='#services' className={ulItemStyle}>
-            Services
-          </Item>
-          <Item href='#reviews' className={ulItemStyle}>
-            Reviews
-          </Item>
-          <Item href='#contact-us' className={contactUsStyle}>
-            Contact us
-          </Item>
-        </ul>
-      </nav>
-    </header>
+          <button className='z-50 lg:hidden' onClick={toggleMenu}>
+            {isMenuOpen ? (
+              <Close
+                alt='Close bar'
+                className='border-greenText w-[30px] rounded-full border-[1px] p-1'
+              />
+            ) : (
+              <MenuBar
+                alt='Menu bar'
+                className='border-greenText w-[30px] rounded-full border-[1px] p-1'
+              />
+            )}
+          </button>
+        </div>
+
+        <NavLists className='md:hidden lg:flex' />
+        <div className='z-10 lg:hidden ' onClick={closeMenu}>
+          {isMenuOpen && (
+            <NavLists
+              className={` absolute top-full z-30 grid  w-full justify-start pb-5
+          md:-mx-12   md:px-12 lg:hidden
+          ${isMenuOpen ? `bg-black/90` : ``} `}
+            />
+          )}
+        </div>
+      </header>
+    </>
   );
 };
