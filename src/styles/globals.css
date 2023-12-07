@@ -192,6 +192,7 @@
 .flash-color {
   animation: flash-color 0.3s ease-in-out;
 }
+
 @keyframes flash-color {
   0% {
     background: hsla(0, 0%, 0%, 0.9);
