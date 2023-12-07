@@ -15,56 +15,56 @@ export const TechnologiesItem = () => {
         <Image
           src={cssTechnologiesIcon}
           alt='html logo'
-          className='w-1/2 md:py-3 xl:py-2 2xl:py-1 '
+          className='w-1/2 sm:py-3 xl:py-2 2xl:py-1 '
         />
       </div>
       <div className={technologiesClassName}>
         <Image
           src={htmlTechnologiesIcon}
           alt='css logo'
-          className='w-1/2 md:py-3 xl:py-2 2xl:py-1'
+          className='w-1/2 sm:py-3 xl:py-2 2xl:py-1'
         />
       </div>
       <div className={technologiesClassName}>
         <Image
           src={jsTechnologiesIcon}
           alt='js logo'
-          className='w-1/4 md:py-3 xl:py-2 2xl:py-1'
+          className='w-1/4 sm:py-3 xl:py-2 2xl:py-1'
         />
       </div>
       <div className={technologiesClassName}>
         <Image
           src={nodejsTechnologiesIcon}
           alt='nodejs logo'
-          className='w-1/2 md:py-3 xl:py-2 2xl:py-1'
+          className='w-1/2 sm:py-3 xl:py-2 2xl:py-1'
         />
       </div>
       <div className={technologiesClassName}>
         <Image
           src={cssTechnologiesIcon}
           alt='html logo'
-          className='w-1/2 md:py-3 xl:py-2 2xl:py-1'
+          className='w-1/2 sm:py-3 xl:py-2 2xl:py-1'
         />
       </div>
       <div className={technologiesClassName}>
         <Image
           src={htmlTechnologiesIcon}
           alt='css logo'
-          className='w-1/2 md:py-3 xl:py-2 2xl:py-1'
+          className='w-1/2 sm:py-3 xl:py-2 2xl:py-1'
         />
       </div>
       <div className={technologiesClassName}>
         <Image
           src={jsTechnologiesIcon}
           alt='js logo'
-          className='w-1/4 md:py-3 xl:py-2 2xl:py-1'
+          className='w-1/4 sm:py-3 xl:py-2 2xl:py-1'
         />
       </div>
       <div className={technologiesClassName}>
         <Image
           src={nodejsTechnologiesIcon}
           alt='nodejs logo'
-          className='w-1/2 md:py-3 xl:py-2 2xl:py-1'
+          className='w-1/2 sm:py-3 xl:py-2 2xl:py-1'
         />
       </div>
     </div>
