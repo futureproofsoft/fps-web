@@ -5,10 +5,10 @@ interface ItemProps {
 }
 
 const ulItemStyle =
-  'hover:border-greenText cursor-pointer md:text-[12px] xl:text-base md:px-1 md:py-1 lg:py-3 2xl:py-2 transition duration-300 hover:border-b-4';
+  'hover:border-greenText cursor-pointer sm:text-[12px] xl:text-base sm:px-1 sm:py-1 lg:py-3 2xl:py-2 transition duration-300 hover:border-b-4';
 
 const contactUsStyle =
-  'color-1  btn-hover cursor-pointer md:text-[12px] xl:text-base rounded-3xl 2xl:px-8 2xl:py-3 font-bold lg:py-2 lg:px-6 md:py-1 md:px-3';
+  'color-1  btn-hover cursor-pointer sm:text-[12px] xl:text-base rounded-3xl 2xl:px-8 2xl:py-3 font-bold lg:py-2 lg:px-6 sm:py-1 sm:px-3';
 
 export const NavLists: React.FC<ItemProps> = ({ className }) => {
   return (

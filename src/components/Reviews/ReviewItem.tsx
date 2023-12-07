@@ -20,7 +20,7 @@ export const ReviewItem: React.FC<ReviewItemProps> = ({
   direction,
 }) => {
   return (
-    <div className='bg-custom-gradient from-lightGreen to-darkBlue 3xl:p-14 z-10 flex flex-col rounded-3xl md:p-6 lg:-mr-28 2xl:p-10'>
+    <div className='bg-custom-gradient from-lightGreen to-darkBlue 3xl:p-14 z-10 flex flex-col rounded-3xl sm:p-6 lg:-mr-28 2xl:p-10'>
       <AnimatePresence>
         {active && (
           <ReviewText
