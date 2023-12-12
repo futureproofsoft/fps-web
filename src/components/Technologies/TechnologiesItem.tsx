@@ -1,71 +1,42 @@
-import Image from 'next/image';
-import cssTechnologiesIcon from 'public/images/technologies/cssTechnologiesIcon.png';
-import htmlTechnologiesIcon from 'public/images/technologies/htmlTechnologiesIcon.png';
-import jsTechnologiesIcon from 'public/images/technologies/jsTechnologiesIcon.png';
-import nodejsTechnologiesIcon from 'public/images/technologies/nodejsTechologiesIcon.png';
+import AwsSvg from 'public/svg/LogoSVG/aws.svg';
+import CssSvg from 'public/svg/LogoSVG/css2.svg';
+import GoogleSvg from 'public/svg/LogoSVG/google.svg';
+import HtmlSvg from 'public/svg/LogoSVG/html2.svg';
+import JavaSricptSvg from 'public/svg/LogoSVG/JavaScript.svg';
+import NodeSvg from 'public/svg/LogoSVG/nodejs.svg';
+import ReactSvg from 'public/svg/LogoSVG/react.svg';
+import TypeSricptSvg from 'public/svg/LogoSVG/typescript.svg';
 import * as React from 'react';
 
 const technologiesClassName =
-  'xl:my-6 h-full object-cover flex items-center justify-center 2xl:my-12 transition duration-300 3xl:hover:scale-125 2xl:hover:scale-[1.15]';
+  'xl:my-6 flex flex sm:items-center sm:justify-center 2xl:my-12 transition duration-300 3xl:hover:scale-125 lg:hover:scale-[1.15]';
 
 export const TechnologiesItem = () => {
   return (
-    <div className='grid grid-cols-4 items-center justify-center gap-[18px]'>
+    <div className=' mb:px-6 flex h-full w-full items-center gap-10 overflow-x-auto  sm:grid sm:grid-cols-4 sm:overflow-hidden'>
       <div className={technologiesClassName}>
-        <Image
-          src={cssTechnologiesIcon}
-          alt='html logo'
-          className='w-1/2 sm:py-3 xl:py-2 2xl:py-1 '
-        />
+        <HtmlSvg className='mb:w-[100px] sm:w-1/2' />
       </div>
       <div className={technologiesClassName}>
-        <Image
-          src={htmlTechnologiesIcon}
-          alt='css logo'
-          className='w-1/2 sm:py-3 xl:py-2 2xl:py-1'
-        />
+        <CssSvg className='mb:w-[100px] sm:w-1/2' />
       </div>
       <div className={technologiesClassName}>
-        <Image
-          src={jsTechnologiesIcon}
-          alt='js logo'
-          className='w-1/4 sm:py-3 xl:py-2 2xl:py-1'
-        />
+        <JavaSricptSvg className='mb:w-[80px] sm:w-1/3' />
       </div>
       <div className={technologiesClassName}>
-        <Image
-          src={nodejsTechnologiesIcon}
-          alt='nodejs logo'
-          className='w-1/2 sm:py-3 xl:py-2 2xl:py-1'
-        />
+        <TypeSricptSvg className='mb:w-[80px] sm:w-1/3' />
       </div>
       <div className={technologiesClassName}>
-        <Image
-          src={cssTechnologiesIcon}
-          alt='html logo'
-          className='w-1/2 sm:py-3 xl:py-2 2xl:py-1'
-        />
+        <NodeSvg className='mb:w-[180px] sm:w-3/4' />
       </div>
       <div className={technologiesClassName}>
-        <Image
-          src={htmlTechnologiesIcon}
-          alt='css logo'
-          className='w-1/2 sm:py-3 xl:py-2 2xl:py-1'
-        />
+        <ReactSvg className='mb:w-[180px] sm:w-full' />
       </div>
       <div className={technologiesClassName}>
-        <Image
-          src={jsTechnologiesIcon}
-          alt='js logo'
-          className='w-1/4 sm:py-3 xl:py-2 2xl:py-1'
-        />
+        <AwsSvg className='mb:w-[90px] sm:w-1/2' />
       </div>
       <div className={technologiesClassName}>
-        <Image
-          src={nodejsTechnologiesIcon}
-          alt='nodejs logo'
-          className='w-1/2 sm:py-3 xl:py-2 2xl:py-1'
-        />
+        <GoogleSvg className='mb:w-[140px] sm:w-3/4' />
       </div>
     </div>
   );

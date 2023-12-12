@@ -8,7 +8,7 @@ import { ServiceItem } from '@/components/Services/ServiceItem';
 
 const data = [
   {
-    image: <MobileApplicationsIcon className='w-1/2' />,
+    image: <MobileApplicationsIcon className='mb:w-2/3 sm:w-1/2' />,
     description: (
       <>
         Mobile
@@ -18,7 +18,7 @@ const data = [
     ),
   },
   {
-    image: <CustomDevelopmentIcon className='w-1/2' />,
+    image: <CustomDevelopmentIcon className='mb:w-2/3 sm:w-1/2' />,
     description: (
       <>
         Custom
@@ -28,7 +28,7 @@ const data = [
     ),
   },
   {
-    image: <UIUXIcon className='w-1/2' />,
+    image: <UIUXIcon className='mb:w-2/3 sm:w-1/2' />,
     description: (
       <>
         UI/UX
@@ -42,16 +42,16 @@ const data = [
 export const Services = () => {
   return (
     <section id='services' className='3xl:py-36  lg:py-20 xl:py-28 '>
-      <h5 className='border-greenText 3xl:text-2xl  px-3 font-bold tracking-[4.8px] sm:text-[12px] md:text-sm xl:border-s-4 xl:text-lg'>
+      <h5 className='border-greenText 3xl:text-2xl mb:text-sm mb:text-[12px] border-s-4 px-3 font-bold tracking-[4.8px] md:text-sm lg:text-base xl:text-lg'>
         SERVICES
       </h5>
-      <h2 className='3xl:text-6xl  font-bold  tracking-normal sm:pb-5 sm:pt-2 sm:text-2xl sm:leading-none lg:pb-14 lg:pt-5 xl:text-[38px] 2xl:pb-20 2xl:pt-7 2xl:text-[44px]'>
+      <h2 className='3xl:text-6xl  mb:pb-5  mb:pt-2 mb:text-2xl mb:leading-none font-bold leading-none tracking-normal lg:pb-14 lg:pt-5 xl:text-[38px] 2xl:pb-20 2xl:pt-7 2xl:text-[44px]'>
         Areas we cover to <span className='text-greenText'>provide</span> our
         clients with a{' '}
         <span className='text-greenText'>complete experience</span>.
       </h2>
 
-      <div className='grid grid-cols-3 gap-6 '>
+      <div className='mb:flex  mb:flex-row mb:-mx-6 mb:px-6 gap-6 overflow-x-auto sm:grid sm:grid-cols-3 '>
         {data.map((item, index) => (
           <ServiceItem
             key={index}
@@ -63,5 +63,3 @@ export const Services = () => {
     </section>
   );
 };
-
-//
