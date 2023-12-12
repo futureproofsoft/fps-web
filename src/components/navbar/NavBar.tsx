@@ -89,15 +89,15 @@ export const NavBar = () => {
       <header
         style={navStyle}
         className={`${
-          isMenuOpen ? 'sm:bg-black/90 lg:hidden' : ''
-        } 3xl:px-36 sm:grid-row-2 sticky z-30 -mx-36 items-center  justify-between sm:-mx-12 sm:grid sm:grid-cols-1 sm:px-12 lg:-mx-16 lg:flex lg:px-16  xl:-mx-20   xl:px-20  2xl:-mx-28 2xl:px-28
+          isMenuOpen ? 'mb:bg-black/90 lg:hidden' : ''
+        } 3xl:px-36 sm:grid-row-2 mb:grid mb:grid-cols-1 mb:-mx-6 mb:px-6  sticky z-30 -mx-36 items-center justify-between sm:-mx-12 sm:px-12 lg:-mx-16 lg:flex lg:px-16  xl:-mx-20   xl:px-20  2xl:-mx-28 2xl:px-28
         ${showNav && yscale > 0 ? `bg-black/90` : `flash-color`} `}
       >
         <div className='z-20 flex justify-between'>
           <a href='#' onClick={closeMenu}>
             <LogoHeader
               alt='Logo'
-              className='3xl:w-[270px] z-20 py-4  sm:w-[140px] lg:w-[180px] xl:w-[200px] 2xl:w-[220px]'
+              className='3xl:w-[270px] mb:w-[140px] z-20 py-4   lg:w-[180px] xl:w-[200px] 2xl:w-[220px]'
             />
           </a>
 
@@ -116,12 +116,12 @@ export const NavBar = () => {
           </button>
         </div>
 
-        <NavLists className='sm:hidden lg:flex' />
+        <NavLists className='mb:hidden lg:flex' />
         <div className='z-10 lg:hidden ' onClick={closeMenu}>
           {isMenuOpen && (
             <NavLists
-              className={` absolute top-full z-30 grid  w-full justify-start pb-5
-          sm:-mx-12   sm:px-12 lg:hidden
+              className={` mb:-mx-6 mb:px-6  absolute top-full z-30  grid w-full justify-start
+           pb-5  sm:-mx-12 sm:px-12 lg:hidden
           ${isMenuOpen ? `bg-black/90` : ``} `}
             />
           )}
