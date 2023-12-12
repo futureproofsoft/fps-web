@@ -42,7 +42,7 @@ export const Reviews = () => {
   };
 
   return (
-    <section id='reviews' className='3xl:py-36  mb:py-12 sm:py-20 lg:py-28'>
+    <section id='reviews' className='3xl:py-36  mb:pt-20 sm:py-20 lg:py-28'>
       <div className='flex'>
         <div className='z-10 flex flex-col justify-between sm:w-full lg:w-[42%]'>
           <div className='flex flex-col  2xl:gap-10'>
@@ -50,7 +50,7 @@ export const Reviews = () => {
               REVIEWS
             </h5>
 
-            <h2 className='3xl:text-6xl  mb:pb-5  mb:pt-2 mb:text-2xl mb:leading-none font-bold leading-none tracking-normal lg:pb-4 lg:pt-5 xl:text-[38px]  2xl:pt-7 2xl:text-[44px]'>
+            <h2 className='3xl:text-6xl mb:pt-6  mb:pb-5   mb:text-2xl mb:leading-none font-bold leading-none tracking-normal lg:pb-4 lg:pt-5 xl:text-[38px]  2xl:pt-7 2xl:text-[44px]'>
               How <span className='text-greenText'>our clients</span> see us.
             </h2>
           </div>

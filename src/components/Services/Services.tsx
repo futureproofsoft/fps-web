@@ -41,11 +41,11 @@ const data = [
 
 export const Services = () => {
   return (
-    <section id='services' className='3xl:py-36  lg:py-20 xl:py-28 '>
-      <h5 className='border-greenText 3xl:text-2xl mb:text-sm mb:text-[12px] border-s-4 px-3 font-bold tracking-[4.8px] md:text-sm lg:text-base xl:text-lg'>
+    <section id='services' className='3xl:py-36 mb:pt-20  lg:py-20 xl:py-28 '>
+      <h5 className='border-greenText 3xl:text-2xl mb:text-sm  border-s-4 px-3 font-bold tracking-[4.8px] md:text-sm lg:text-base xl:text-lg'>
         SERVICES
       </h5>
-      <h2 className='3xl:text-6xl  mb:pb-5  mb:pt-2 mb:text-2xl mb:leading-none font-bold leading-none tracking-normal lg:pb-14 lg:pt-5 xl:text-[38px] 2xl:pb-20 2xl:pt-7 2xl:text-[44px]'>
+      <h2 className='3xl:text-6xl  mb:pb-12  mb:pt-6  mb:text-2xl mb:leading-none font-bold leading-none tracking-normal lg:pb-14 lg:pt-5 xl:text-[38px] 2xl:pb-20 2xl:pt-7 2xl:text-[44px]'>
         Areas we cover to <span className='text-greenText'>provide</span> our
         clients with a{' '}
         <span className='text-greenText'>complete experience</span>.

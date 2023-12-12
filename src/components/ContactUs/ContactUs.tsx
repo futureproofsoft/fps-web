@@ -13,7 +13,7 @@ export const ContactUs = () => {
       id='contact-us'
       className='3xl:py-36 mb:py-12 sm:pb-24 lg:py-20 xl:py-28'
     >
-      <div className='mb:grid-rows-2 grid sm:grid-cols-2 md:grid-rows-1 lg:grid-cols-[1.6fr,1fr,1fr]  '>
+      <div className='mb:grid-rows-1 grid sm:grid-cols-2 md:grid-rows-1 lg:grid-cols-[1.6fr,1fr,1fr]  '>
         <div className='3xl:pr-48 mb:col-span-2 mb:pb-8 mb:pr-12 justify-between gap-1 md:flex md:flex-col lg:col-span-1  lg:pr-24 xl:pr-36 2xl:pr-44'>
           <h5 className='border-greenText 3xl:text-2xl  border-s-4 px-3 font-bold tracking-[4.8px] sm:text-[12px] md:text-sm  xl:text-lg'>
             CONTACT US
@@ -53,7 +53,7 @@ export const ContactUs = () => {
           </div>
         </div>
 
-        <div className=' colorContact grid justify-between rounded-bl-3xl rounded-tl-3xl  border-2 border-solid border-transparent sm:grid-rows-[2fr,2fr,1fr] sm:px-8 sm:py-4 md:px-14 md:py-4 lg:grid-rows-3 lg:px-8  xl:px-12 xl:py-8 2xl:p-12'>
+        <div className='mb:hidden colorContact justify-between rounded-bl-3xl rounded-tl-3xl border-2 border-solid  border-transparent sm:grid sm:grid-rows-[2fr,2fr,1fr] sm:px-8 sm:py-4 md:px-14 md:py-4 lg:grid-rows-3 lg:px-8  xl:px-12 xl:py-8 2xl:p-12'>
           <div className='flex items-start justify-center'>
             <h2 className='3xl:text-5xl 3xl:leading-[64px] font-bold lg:text-2xl xl:text-3xl xl:leading-none 2xl:text-4xl '>
               Got a project?
@@ -75,7 +75,7 @@ export const ContactUs = () => {
         </div>
 
         <div
-          className='grid rounded-br-3xl rounded-tr-3xl border-y-2 border-r-2  border-solid sm:grid-rows-[2fr,2fr,1fr]  sm:px-8 sm:py-4
+          className='mb:hidden rounded-br-3xl rounded-tr-3xl border-y-2 border-r-2 border-solid  sm:grid sm:grid-rows-[2fr,2fr,1fr]  sm:px-8 sm:py-4
 md:px-14 md:py-4 lg:grid-rows-3 lg:px-8 lg:py-4 xl:px-12 xl:py-8 2xl:p-12'
         >
           <div className='flex items-start justify-center'>
