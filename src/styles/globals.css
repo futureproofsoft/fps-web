@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* remove unused */
 
 :root {
   /* #region  /**=========== Primary Color =========== */

@@ -37,7 +37,7 @@ export default {
       },
       fontFamily: {
         primary: [
-          'normal normal bold 68px/72px Blinker;',
+          'normal normal bold 68px/72px Blinker',
           ...defaultTheme.fontFamily.sans,
         ],
       },

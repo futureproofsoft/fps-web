@@ -14,7 +14,7 @@ const nextConfig = {
   //   ],
   // },
 
-  webpack(config, { isServer }) {
+  webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
       rule.test?.test?.('.svg')
@@ -39,23 +39,7 @@ const nextConfig = {
         },
       }
     );
-    if (!isServer) {
-      // Add a rule to handle CSS files
-      config.module.rules.push({
-        test: /\.css$/,
-        use: [
-          // The 'style-loader' injects CSS into the DOM using <style> tags.
-          // Replace this with 'mini-css-extract-plugin' loader in production for better performance.
-          'style-loader',
 
-          // The 'css-loader' interprets @import and url() like import/require() and resolves them.
-          'css-loader',
-
-          // Add 'postcss-loader' here if you have PostCSS configuration.
-          // 'postcss-loader',
-        ],
-      });
-    }
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
     fileLoaderRule.exclude = /\.svg$/i;
 
