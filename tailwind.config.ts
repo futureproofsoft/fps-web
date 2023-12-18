@@ -5,7 +5,7 @@ export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     screens: {
-      mb: '350px',
+      mb: '300px',
 
       sm: '640px',
       // => @media (min-width: 640px) { ... }
@@ -68,6 +68,10 @@ export default {
           '0%, 100%': { transform: 'rotateY(30deg)' },
           '50%': { transform: 'rotateY(180deg)' },
         },
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        },
 
         flicker: {
           '0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100%': {
@@ -93,6 +97,7 @@ export default {
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',
         'spin-X': 'spin-X 3s linear infinite',
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
       },
     },
   },

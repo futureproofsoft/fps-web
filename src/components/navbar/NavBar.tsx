@@ -12,6 +12,7 @@ export const NavBar = () => {
   const [showNav, setShowNav] = React.useState(true);
   const [lastScrollPosition, setLastScrollPosition] = React.useState(0);
   const [yscale, setYscale] = React.useState(0);
+  const [isLargeScreen, setIsLargeScreen] = React.useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -77,56 +78,109 @@ export const NavBar = () => {
     };
   }, [isMenuOpen]);
 
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth <= 1024);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const navStyle = {
     opacity: showNav ? 1 : 0,
     top: showNav ? 0 : '-100px',
     transition: 'opacity 0.5s, top 0.5s',
     transitionTimingFunction: 'ease-in-out',
+    ...(isLargeScreen &&
+      isMenuOpen && {
+        background: 'hsla(0, 0%, 0%, 0.9)',
+      }),
   };
 
   return (
     <>
-      <header
-        style={navStyle}
-        className={`${
-          isMenuOpen ? 'mb:bg-black/90 lg:hidden' : ''
-        } 3xl:px-36 sm:grid-row-2 mb:grid mb:grid-cols-1 mb:-mx-6 mb:px-6  sticky z-30 -mx-36 items-center justify-between sm:-mx-12 sm:px-12 lg:-mx-16 lg:flex lg:px-16  xl:-mx-20   xl:px-20  2xl:-mx-28 2xl:px-28
-        ${showNav && yscale > 0 ? `bg-black/90` : `flash-color`} `}
-      >
-        <div className='z-20 flex justify-between'>
-          <a href='#' onClick={closeMenu}>
-            <LogoHeader
-              alt='Logo'
-              className='3xl:w-[270px] mb:w-[140px] z-20 py-4   lg:w-[180px] xl:w-[200px] 2xl:w-[220px]'
-            />
-          </a>
+      {isLargeScreen && (
+        <header
+          className={`${
+            isMenuOpen ? 'hidden bg-black/90' : ''
+          } 3xl:px-36 sm:grid-row-2 mb:grid mb:grid-cols-1  mb:sticky mb:-mx-6 mb:px-6  3xl:-mx-36 sticky z-30 items-center justify-between sm:-mx-12 sm:px-12 lg:-mx-16 lg:flex lg:px-16  xl:-mx-20   xl:px-20  2xl:-mx-28 2xl:px-28`}
+        >
+          <div className='z-20 flex justify-between'>
+            <a href='#' onClick={closeMenu}>
+              <LogoHeader
+                alt='Logo'
+                className='3xl:w-[270px] mb:w-[200px] z-20 py-4 md:w-[220px]   lg:w-[200px] xl:w-[200px] 2xl:w-[220px]'
+              />
+            </a>
 
-          <button className='z-50 lg:hidden' onClick={toggleMenu}>
-            {isMenuOpen ? (
-              <Close
-                alt='Close bar'
-                className='border-greenText w-[30px] rounded-full border-[1px] p-1'
-              />
-            ) : (
-              <MenuBar
-                alt='Menu bar'
-                className='border-greenText w-[30px] rounded-full border-[1px] p-1'
-              />
+            <button className='z-50 lg:hidden' onClick={toggleMenu}>
+              {isMenuOpen ? (
+                <Close
+                  alt='Close bar'
+                  className='border-greenText mb:w-[35px] rounded-full border-[1px] p-1 md:w-[40px]'
+                />
+              ) : (
+                <MenuBar
+                  alt='Menu bar'
+                  className='border-greenText mb:w-[35px] rounded-full border-[1px] p-1 md:w-[40px]'
+                />
+              )}
+            </button>
+          </div>
+
+          <NavLists className='mb:hidden lg:flex' />
+          <div className='z-10 lg:hidden ' onClick={closeMenu}>
+            {isMenuOpen && (
+              <NavLists className='mb:-mx-6 mb:px-6 mb:py-4  absolute top-full z-30  grid w-full justify-center bg-black/90 pb-5  sm:-mx-12 sm:px-12 lg:hidden' />
             )}
-          </button>
-        </div>
+          </div>
+        </header>
+      )}
+      {!isLargeScreen && (
+        <header
+          style={navStyle}
+          className={`${
+            isMenuOpen ? 'hidden bg-black/90' : ''
+          } 3xl:px-36 sm:grid-row-2 mb:grid mb:grid-cols-1  mb:sticky mb:-mx-6 mb:px-6  3xl:-mx-36 sticky z-30 items-center justify-between sm:-mx-12 sm:px-12 lg:-mx-16 lg:flex lg:px-16  xl:-mx-20   xl:px-20  2xl:-mx-28 2xl:px-28
+       ${showNav && yscale > 0 ? `bg-black/90` : `flash-color`} `}
+        >
+          <div className='z-20 flex justify-between'>
+            <a href='#' onClick={closeMenu}>
+              <LogoHeader
+                alt='Logo'
+                className='3xl:w-[270px] mb:w-[200px] z-20 py-4 md:w-[220px]   lg:w-[200px] xl:w-[200px] 2xl:w-[220px]'
+              />
+            </a>
 
-        <NavLists className='mb:hidden lg:flex' />
-        <div className='z-10 lg:hidden ' onClick={closeMenu}>
-          {isMenuOpen && (
-            <NavLists
-              className={` mb:-mx-6 mb:px-6  absolute top-full z-30  grid w-full justify-start
-           pb-5  sm:-mx-12 sm:px-12 lg:hidden
-          ${isMenuOpen ? `bg-black/90` : ``} `}
-            />
-          )}
-        </div>
-      </header>
+            <button className='z-50 lg:hidden' onClick={toggleMenu}>
+              {isMenuOpen ? (
+                <Close
+                  alt='Close bar'
+                  className='border-greenText mb:w-[35px] rounded-full border-[1px] p-1 md:w-[40px]'
+                />
+              ) : (
+                <MenuBar
+                  alt='Menu bar'
+                  className='border-greenText mb:w-[35px] rounded-full border-[1px] p-1 md:w-[40px]'
+                />
+              )}
+            </button>
+          </div>
+
+          <NavLists className='mb:hidden lg:flex' />
+          <div className='z-10 lg:hidden ' onClick={closeMenu}>
+            {isMenuOpen && (
+              <NavLists className='mb:-mx-6 mb:px-6 mb:py-4  absolute top-full z-30  grid w-full justify-center bg-black/90 pb-5  sm:-mx-12 sm:px-12 lg:hidden' />
+            )}
+          </div>
+        </header>
+      )}
     </>
   );
 };
