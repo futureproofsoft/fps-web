@@ -68,7 +68,7 @@ export const HowItWorks = () => {
                 itemNumber={`0${index + 1}`}
                 itemName={worksItem.itemName}
                 itemDescription={worksItem.itemDescription}
-                active={activeElement === index}
+                active={activeElement >= index}
               />
             );
           })}
