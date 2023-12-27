@@ -56,39 +56,39 @@ export const ReviewsNew = () => {
           </h2>
         </div>
 
-        <div className='border-reviews -m-2 rounded-2xl'>
-          <div className='bg-custom-gradient  from-lightGreen to-darkBlue mb:flex-col flex rounded-2xl  md:flex-row'>
-            <div className='mb:hidden md:!flex'>
-              <Image
-                src={PhonePicture}
-                priority
-                alt='Phone Picture'
-                className='rounded-bl-2xl rounded-tl-2xl !object-cover !object-center py-[2px]   brightness-[0.3] md:[clip-path:polygon(0%_0%,90%_0%,75%_100%,0%_100%)] '
+        <div className='flex flex-row rounded-2xl'>
+          {/* <div className=' mb:flex-col flex rounded-2xl  md:flex-row'> */}
+          <div className='mb:hidden md:flex'>
+            <Image
+              src={PhonePicture}
+              priority
+              alt='Phone Picture'
+              className='rounded-bl-2xl rounded-tl-2xl !object-cover !object-center  brightness-[0.3] md:[clip-path:polygon(0%_0%,90%_0%,75%_100%,0%_100%)] '
+            />
+          </div>
+          <div className='bg-custom-gradient from-lightGreen to-darkBlue rounded-2xl md:-ml-44 md:pl-48'>
+            <ReviewItem
+              key={page}
+              name={data[imageIndex].name}
+              title={data[imageIndex].title}
+              message={data[imageIndex].message}
+              active={true}
+              paginate={paginate}
+              direction={direction}
+            />
+            <div className='flex items-end justify-end gap-[18px] pb-3 pr-3 '>
+              <Arrow
+                onClick={() => paginate(1)}
+                className='border-greenText 3xl:w-[50px] mb:w-[35px] rotate-180 rounded-full border-[1.5px] hover:cursor-pointer xl:w-[40px]'
               />
-            </div>
-            <div className='flex w-full flex-col justify-between p-5'>
-              <ReviewItem
-                key={page}
-                name={data[imageIndex].name}
-                title={data[imageIndex].title}
-                message={data[imageIndex].message}
-                active={true}
-                paginate={paginate}
-                direction={direction}
+              <Arrow
+                onClick={() => paginate(-1)}
+                className='border-greenText 3xl:w-[50px] mb:w-[35px] rounded-full border-[1.5px] hover:cursor-pointer xl:w-[40px]'
               />
-              <div className='flex items-end justify-end gap-[18px] '>
-                <Arrow
-                  onClick={() => paginate(1)}
-                  className='border-greenText 3xl:w-[50px] mb:w-[35px] rotate-180 rounded-full border-[1.5px] hover:cursor-pointer xl:w-[40px]'
-                />
-                <Arrow
-                  onClick={() => paginate(-1)}
-                  className='border-greenText 3xl:w-[50px] mb:w-[35px] rounded-full border-[1.5px] hover:cursor-pointer xl:w-[40px]'
-                />
-              </div>
             </div>
           </div>
         </div>
+        {/* </div> */}
       </>
     </section>
   );

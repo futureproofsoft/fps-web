@@ -18,8 +18,8 @@ export const WorksItem: React.FC<WorksProps> = ({
     <div
       className={`flex py-6 ${
         active
-          ? 'transition duration-300'
-          : 'opacity-20 transition duration-300'
+          ? 'transition duration-700'
+          : 'opacity-20 transition duration-700'
       }`}
     >
       {itemNumber && (
