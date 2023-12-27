@@ -63,7 +63,7 @@ export const ReviewsNew = () => {
                 src={PhonePicture}
                 priority
                 alt='Phone Picture'
-                className='rounded-bl-2xl rounded-tl-2xl object-cover object-center py-[2px]   brightness-[0.3] md:[clip-path:polygon(0%_0%,90%_0%,75%_100%,0%_100%)] '
+                className='rounded-bl-2xl rounded-tl-2xl !object-cover !object-center py-[2px]   brightness-[0.3] md:[clip-path:polygon(0%_0%,90%_0%,75%_100%,0%_100%)] '
               />
             </div>
             <div className='flex w-full flex-col justify-between p-5'>
