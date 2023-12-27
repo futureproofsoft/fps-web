@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import PhonePicture from 'public/images/freestocks-L5DxWLmywmM-unsplash.png';
+import PhonePicture from 'public/images/reviewsImage.png';
 import Arrow from 'public/svg/Arrow.svg';
 import * as React from 'react';
 

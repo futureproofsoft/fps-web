@@ -17,27 +17,34 @@ export const ReviewText: React.FC<Props> = ({ name, title, message }) => {
   };
 
   return (
-    <motion.div
-      variants={textVariants}
-      initial='enter'
-      animate='center'
-      exit='exit'
-      transition={{ opacity: { duration: 1.0 } }}
-      className='review-text'
-    >
-      <div className='3xl:px-5 3xl:pb-10 3xl:text-xl mb:pb-2 xl:px-3 xl:pb-6 xl:text-lg'>
-        <p className='3xl:text-[28px] mb:pb-[2px] mb:text-xl pb-1 font-bold xl:text-2xl'>
-          {name}
-        </p>
-        <p className='3xl:text-xl mb:text-sm xl:text-base'>{title}</p>
-      </div>
-      <div className='relative'>
-        <Quote className='3xl:w-16 3xl:-left-8 3xl:-top-8 mb:-left-4 mb:-top-3 mb:w-10 absolute rotate-180 lg:-left-6 lg:-top-4 xl:-left-4 xl:-top-6 xl:w-12' />
-        <p className='3xl:text-xl mb:text-sm md:text-base lg:text-sm xl:text-base'>
-          {message}
-        </p>
-        <Quote className='3xl:w-16 3xl:top-14 mb:top-16 mb:w-10 absolute right-0 sm:top-6 lg:top-8 xl:top-10   xl:w-12' />
-      </div>
-    </motion.div>
+    <>
+      <motion.div
+        variants={textVariants}
+        initial='enter'
+        animate='center'
+        exit='exit'
+        transition={{ opacity: { duration: 1.0 } }}
+        className='review-text mb:p-2 md:pr-16'
+      >
+        <div className='flex flex-col'>
+          <p className='mb:text-xl pb-1 font-bold  md:text-2xl xl:text-2xl 2xl:text-3xl'>
+            {name}
+          </p>
+          <p className='mb:text-lg pb-5 font-bold  md:text-xl xl:text-2xl 2xl:text-2xl'>
+            {title}
+          </p>
+          <div className='mb:-ml-6 mb:-mb-6 md:-ml-12'>
+            <Quote className='3xl:w-16 mb:w-10  rotate-180 xl:w-12' />
+          </div>
+          <p className='mb:text-sm mb:pb-10  md:text-base lg:text-base xl:text-lg 2xl:text-xl'>
+            {message}
+          </p>
+          <div className='mb:-mr-2 -m-10 flex items-end justify-end'>
+            <Quote className='3xl:w-16 mb:w-10 flex items-end justify-end sm:mr-36 md:mr-20  xl:w-12' />
+          </div>
+        </div>
+      </motion.div>
+      <div className='relative'></div>
+    </>
   );
 };
