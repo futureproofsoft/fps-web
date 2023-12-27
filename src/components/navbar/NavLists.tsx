@@ -13,7 +13,7 @@ const contactUsStyle =
 export const NavLists: React.FC<ItemProps> = ({ className }) => {
   return (
     <nav className={className}>
-      <ul className='3xl:text-base mb:gap-6 font-medium lg:flex  xl:text-sm '>
+      <ul className='3xl:text-base mb:gap-6 font-medium lg:flex xl:text-sm '>
         <Item href='#about-us' className={ulItemStyle}>
           About us
         </Item>

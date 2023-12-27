@@ -18,6 +18,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.6.0",
+    "@types/glidejs__glide": "^3.6.5",
     "clsx": "^1.2.1",
     "framer-motion": "^10.16.5",
     "lucide-react": "^0.260.0",
@@ -27,6 +29,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "sharp": "^0.32.6",
+    "swiper": "^11.0.5",
     "tailwind-merge": "^1.13.2"
   },
   "devDependencies": {

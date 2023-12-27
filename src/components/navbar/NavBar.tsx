@@ -176,7 +176,7 @@ export const NavBar = () => {
           <NavLists className='mb:hidden lg:flex' />
           <div className='z-10 lg:hidden ' onClick={closeMenu}>
             {isMenuOpen && (
-              <NavLists className='mb:-mx-6 mb:px-6 mb:py-4  absolute top-full z-30  grid w-full justify-center bg-black/90 pb-5  sm:-mx-12 sm:px-12 lg:hidden' />
+              <NavLists className='z-30 justify-center bg-black/90 pb-5  lg:hidden' />
             )}
           </div>
         </header>

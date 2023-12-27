@@ -8,7 +8,7 @@ import { ContactUs } from '@/components/ContactUs/ContactUs';
 import { Hero } from '@/components/hero/Hero';
 import { HowItWorks } from '@/components/HowItWorks/HowItWorks';
 import { WhoWeAre } from '@/components/HowItWorks/WhoWeAre';
-import { Reviews } from '@/components/Reviews/Reviews';
+import { ReviewsNew } from '@/components/Reviews/ReviewsNew';
 import { Services } from '@/components/Services/Services';
 import { Technologies } from '@/components/Technologies/Technologies';
 
@@ -28,7 +28,8 @@ export default function HomePage() {
       <HowItWorks />
       <Technologies />
       <Services />
-      <Reviews />
+      {/* <Reviews /> */}
+      <ReviewsNew />
       <ContactUs />
     </main>
   );
