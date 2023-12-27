@@ -58,7 +58,7 @@ export const ReviewsNew = () => {
 
         <div className='border-reviews -m-2 rounded-2xl'>
           <div className='bg-custom-gradient  from-lightGreen to-darkBlue mb:flex-col flex rounded-2xl  md:flex-row'>
-            <div className='mb:hidden md:flex'>
+            <div className='mb:hidden md:!flex'>
               <Image
                 src={PhonePicture}
                 priority
