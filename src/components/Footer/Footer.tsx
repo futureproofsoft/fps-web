@@ -1,5 +1,5 @@
-import Linkedin from 'public/svg/linkedin.svg';
-import Mail from 'public/svg/mail.svg';
+import Linkedin from 'public/svg/ElementSvg/linkedin.svg';
+import Mail from 'public/svg/ElementSvg/mail.svg';
 import React from 'react';
 
 export const Footer = () => {

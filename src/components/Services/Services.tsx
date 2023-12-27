@@ -1,7 +1,11 @@
 'use client';
-import CustomDevelopmentIcon from 'public/svg/custom-development-illustration.svg';
-import MobileApplicationsIcon from 'public/svg/mobile-app-illustration.svg';
-import UIUXIcon from 'public/svg/uxui-design-illustration.svg';
+// import CustomDevelopmentIcon from 'public/svg/custom-development-illustration.svg';
+// import MobileApplicationsIcon from 'public/svg/mobile-app-illustration.svg';
+// import UIUXIcon from 'public/svg/uxui-design-illustration.svg';
+
+import CustomDevelopmentIcon from 'public/svg/servicesSVG/CustomDevelopmentIcon.svg';
+import MobileApplicationsIcon from 'public/svg/servicesSVG/MobileApplicationsIcon.svg';
+import UIUXIcon from 'public/svg/servicesSVG/UIUXIcon.svg';
 import * as React from 'react';
 
 import { ServiceItem } from '@/components/Services/ServiceItem';

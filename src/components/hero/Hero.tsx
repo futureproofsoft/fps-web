@@ -1,4 +1,4 @@
-import Laptop from 'public/svg/Laptop.svg';
+import Laptop from 'public/svg/ElementSvg/Laptop.svg';
 import * as React from 'react';
 
 export const Hero = () => {

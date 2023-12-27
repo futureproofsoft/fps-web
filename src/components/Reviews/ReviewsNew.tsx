@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import PhonePicture from 'public/images/reviewsImage.png';
-import Arrow from 'public/svg/Arrow.svg';
+import Arrow from 'public/svg/ElementSvg/Arrow.svg';
 import * as React from 'react';
 
 import { ReviewItem } from '@/components/Reviews/ReviewItem';

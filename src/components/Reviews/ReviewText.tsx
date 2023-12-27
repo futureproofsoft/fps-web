@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import Quote from 'public/svg/quotation.svg';
+import Quote from 'public/svg/ElementSvg/quotation.svg';
 import React from 'react';
 
 interface Props {
