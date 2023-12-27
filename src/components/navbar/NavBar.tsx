@@ -1,8 +1,8 @@
 'use client';
 
-import Close from 'public/svg/close.svg';
-import LogoHeader from 'public/svg/LogoHeader.svg';
-import MenuBar from 'public/svg/menu.svg';
+import Close from 'public/svg/ElementSvg/close.svg';
+import MenuBar from 'public/svg/ElementSvg/menu.svg';
+import LogoHeader from 'public/svg/FpsSvg/LogoHeader.svg';
 import * as React from 'react';
 
 import { NavLists } from '@/components/navbar/NavLists';
