@@ -202,8 +202,3 @@
     background: transparent;
   }
 }
-
-.border-reviews {
-  outline: 8px solid #111111;
-  outline-offset: -4px;
-}

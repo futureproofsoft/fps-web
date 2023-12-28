@@ -20,7 +20,7 @@ export const ReviewItem: React.FC<ReviewItemProps> = ({
   direction,
 }) => {
   return (
-    <div className='flex flex-col  '>
+    <div className='flex flex-col '>
       <AnimatePresence>
         {active && (
           <ReviewText
