@@ -26,21 +26,21 @@ export const ReviewText: React.FC<Props> = ({ name, title, message }) => {
         transition={{ opacity: { duration: 1.0 } }}
         className='review-text mb:p-2 md:pr-16'
       >
-        <div className='flex flex-col'>
-          <p className='mb:text-xl p-5 pb-1 font-bold md:text-2xl xl:text-2xl 2xl:text-3xl'>
+        <div className='flex flex-col pl-44'>
+          <p className='mb:text-xl pb-1 font-bold  md:text-2xl xl:text-2xl 2xl:text-3xl'>
             {name}
           </p>
-          <p className='mb:text-lg px-5 pb-5 font-bold md:text-xl xl:text-2xl 2xl:text-2xl'>
+          <p className='mb:text-lg pb-5 font-bold  md:text-xl xl:text-2xl 2xl:text-2xl'>
             {title}
           </p>
-          <div className='relative'>
-            <Quote className='3xl:w-16 mb:w-10 mb:-mb-5 rotate-180 xl:w-12' />
+          <div className='mb:-ml-6 mb:-mb-6 md:-ml-12'>
+            <Quote className='3xl:w-16 mb:w-10  rotate-180 xl:w-12' />
           </div>
-          <p className='mb:text-sm px-8 md:text-base lg:text-base xl:text-lg 2xl:text-xl'>
+          <p className='mb:text-sm mb:pb-10  md:text-base lg:text-base xl:text-lg 2xl:text-xl'>
             {message}
           </p>
-          <div className='relative inset-x-[85%]	'>
-            <Quote className='3xl:w-16 mb:w-10 mb:-mt-5 xl:w-12' />
+          <div className='mb:-mr-2 -m-10 flex items-end justify-end'>
+            <Quote className='3xl:w-16 mb:w-10 flex items-end justify-end sm:mr-36 md:mr-20  xl:w-12' />
           </div>
         </div>
       </motion.div>
