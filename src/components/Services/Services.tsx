@@ -46,6 +46,7 @@ const data = [
 export const Services = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
   const [isLargeScreen, setIsLargeScreen] = React.useState(false);
+  const touchStartX = React.useRef<number>(0);
 
   React.useEffect(() => {
     scrollToService(activeIndex);
@@ -66,6 +67,27 @@ export const Services = () => {
     };
   }, []);
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const touchDiff = touchEndX - touchStartX.current;
+
+    if (touchDiff > 20) {
+      // Swipe right
+      setActiveIndex((prevIndex) =>
+        prevIndex === 0 ? data.length - 1 : prevIndex - 1
+      );
+    } else if (touchDiff < -20) {
+      // Swipe left
+      setActiveIndex((prevIndex) =>
+        prevIndex === data.length - 1 ? 0 : prevIndex + 1
+      );
+    }
+  };
+
   const scrollToService = (index: number) => {
     const element = document.getElementById(`service-item-${index}`);
     if (element) {
@@ -84,7 +106,12 @@ export const Services = () => {
   };
 
   return (
-    <section id='services' className='3xl:py-36 mb:pt-20  lg:py-20 xl:py-28 '>
+    <section
+      id='services'
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      className='3xl:py-36 mb:pt-20  lg:py-20 xl:py-28 '
+    >
       <h5 className='border-greenText 3xl:text-2xl mb:text-sm  border-s-4 px-3 font-bold tracking-[4.8px] md:text-sm lg:text-base xl:text-lg'>
         SERVICES
       </h5>
