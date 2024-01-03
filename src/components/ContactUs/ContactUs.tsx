@@ -2,7 +2,7 @@
 import * as React from 'react';
 
 const submitStyle =
-  'color-1  btn-hover cursor-pointer mb:text-xl lg:text-xl rounded-3xl 2xl:px-16 2xl:py-3 font-bold lg:py-2 lg:px-12 mb:py-2 mb:px-12';
+  'color-1  btn-hover cursor-pointer mb:text-xl py-2 lg:text-xl rounded-3xl 2xl:px-16 2xl:py-2 font-bold lg:py-2 lg:px-12 mb:py-2 mb:px-12';
 
 export const ContactUs = () => {
   const [name, setName] = React.useState('');

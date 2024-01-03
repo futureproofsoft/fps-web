@@ -5,8 +5,6 @@ import Arrow from 'public/svg/ElementSvg/Arrow.svg';
 import Quote from 'public/svg/ElementSvg/quotation.svg';
 import * as React from 'react';
 
-// import { ReviewItem } from '@/components/Reviews/ReviewItem';
-
 export const ReviewsNew = () => {
   const data = [
     {
@@ -54,7 +52,7 @@ export const ReviewsNew = () => {
             />
           </div>
 
-          <div className='bg-custom-gradient from-lightGreen  border-blackBg to-darkBlue mb:p-4 flex flex-col justify-between  rounded-2xl border-2 md:-ml-64 md:p-8 md:pl-60'>
+          <div className='bg-custom-gradient from-lightGreen  border-blackBg to-darkBlue mb:p-4 flex flex-col justify-between rounded-2xl  border-2  md:-ml-64  md:pl-60'>
             <div className='md:pr-16'>
               <div className='flex flex-col'>
                 <p className='mb:text-xl  font-bold md:text-2xl xl:text-2xl 2xl:text-3xl'>
@@ -67,13 +65,15 @@ export const ReviewsNew = () => {
             </div>
             <div className='flex flex-col '>
               <div className='flex'>
-                <Quote className='3xl:w-16 mb:w-10 mb:-ml-3 mb:-mb-7 rotate-180 md:-mb-5 md:-ml-10 xl:w-12' />
+                <Quote className='3xl:w-16 mb:w-10 mb:-ml-3 mb:-mb-7 absolute rotate-180 md:-mb-5 md:-ml-10 xl:w-12' />
               </div>
-              <p className='mb:text-sm  z-10 flex h-[220px] items-center justify-center  md:text-base lg:text-base xl:text-lg 2xl:text-xl'>
+
+              <p className='mb:text-sm mb:h-[220px] z-10 my-10 flex h-[200px] items-center justify-center sm:h-[200px] sm:text-base md:text-base  lg:h-[180px] lg:text-base xl:text-lg 2xl:text-xl'>
                 {activeItem.message}
               </p>
+
               <div className='-mt-8 flex items-end justify-end'>
-                <Quote className='3xl:w-16 mb:w-10 flex items-end justify-end xl:w-12' />
+                <Quote className='3xl:w-16 mb:w-10  flex items-end justify-end xl:w-12' />
               </div>
             </div>
             <div className='mb:gap-4 flex items-end justify-end md:gap-8'>

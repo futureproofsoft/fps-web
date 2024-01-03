@@ -1,8 +1,4 @@
 'use client';
-// import CustomDevelopmentIcon from 'public/svg/custom-development-illustration.svg';
-// import MobileApplicationsIcon from 'public/svg/mobile-app-illustration.svg';
-// import UIUXIcon from 'public/svg/uxui-design-illustration.svg';
-
 import CustomDevelopmentIcon from 'public/svg/servicesSVG/CustomDevelopmentIcon.svg';
 import MobileApplicationsIcon from 'public/svg/servicesSVG/MobileApplicationsIcon.svg';
 import UIUXIcon from 'public/svg/servicesSVG/UIUXIcon.svg';
@@ -52,23 +48,23 @@ export const Services = () => {
   const [isLargeScreen, setIsLargeScreen] = React.useState(false);
 
   React.useEffect(() => {
+    scrollToService(activeIndex);
+  }, [activeIndex]);
+
+  React.useEffect(() => {
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth <= 767);
     };
 
     handleResize();
-
     window.addEventListener('resize', handleResize);
+
+    setActiveIndex(1);
 
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
-  const handleServiceItemClick = (index: number) => {
-    setActiveIndex(index);
-    scrollToService(index);
-  };
 
   const scrollToService = (index: number) => {
     const element = document.getElementById(`service-item-${index}`);
@@ -92,14 +88,14 @@ export const Services = () => {
       <h5 className='border-greenText 3xl:text-2xl mb:text-sm  border-s-4 px-3 font-bold tracking-[4.8px] md:text-sm lg:text-base xl:text-lg'>
         SERVICES
       </h5>
-      <h2 className='3xl:text-6xl  mb:pb-12  mb:pt-6  mb:text-2xl mb:leading-none font-bold leading-none tracking-normal lg:pb-14 lg:pt-5 xl:text-[38px] 2xl:pb-20 2xl:pt-7 2xl:text-[44px]'>
+      <h2 className='3xl:text-6xl  mb:pb-12   mb:pt-6  mb:text-2xl mb:leading-none font-bold leading-none tracking-normal lg:pb-14 lg:pt-5 xl:text-[38px] 2xl:pb-20 2xl:pt-7 2xl:text-[44px]'>
         Areas we cover to <span className='text-greenText'>provide</span> our
         clients with a{' '}
         <span className='text-greenText'>complete experience</span>.
       </h2>
 
       {isLargeScreen && (
-        <div className='mb:flex  mb:flex-row mb:-mx-6 mb:px-6 overflow-x-auto '>
+        <div className='mb:flex  mb:flex-row mb:-mx-6 mb:px-6  overflow-x-auto '>
           {data.map((item, index) => (
             <div
               key={index}
@@ -112,7 +108,7 @@ export const Services = () => {
             >
               <div
                 className='cursor-pointer'
-                onClick={() => handleServiceItemClick(index)}
+                onClick={() => setActiveIndex(index)}
               >
                 <ServiceItem
                   key={index}
