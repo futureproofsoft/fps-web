@@ -76,15 +76,19 @@ export const Services = () => {
     const touchDiff = touchEndX - touchStartX.current;
 
     if (touchDiff > 20) {
-      // Swipe right
       setActiveIndex((prevIndex) =>
         prevIndex === 0 ? data.length - 1 : prevIndex - 1
       );
     } else if (touchDiff < -20) {
-      // Swipe left
       setActiveIndex((prevIndex) =>
         prevIndex === data.length - 1 ? 0 : prevIndex + 1
       );
+    }
+
+    if (activeIndex === 0 && touchDiff > -20) {
+      setActiveIndex(0);
+    } else if (activeIndex === 2 && touchDiff < 20) {
+      setActiveIndex(2);
     }
   };
 
@@ -106,12 +110,7 @@ export const Services = () => {
   };
 
   return (
-    <section
-      id='services'
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-      className='3xl:py-36 mb:pt-20  lg:py-20 xl:py-28 '
-    >
+    <section id='services' className='3xl:py-36 mb:pt-20  lg:py-20 xl:py-28 '>
       <h5 className='border-greenText 3xl:text-2xl mb:text-sm  border-s-4 px-3 font-bold tracking-[4.8px] md:text-sm lg:text-base xl:text-lg'>
         SERVICES
       </h5>
@@ -126,6 +125,8 @@ export const Services = () => {
           {data.map((item, index) => (
             <div
               key={index}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
               id={`service-item-${index}`}
               className={`relative ${
                 activeIndex !== index
