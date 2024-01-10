@@ -59,9 +59,9 @@
            A 370.5 200 0 1 0 741,453.8" >
     </animateMotion>
   </circle>
-<circle fill="red" id="Ellipse_10-2-1" cy="177" data-name="Ellipse 10-2" class="cls-11" r="14">
-  <animate attributeName="visibility" dur="10s" repeatCount="indefinite"
-     keyTimes="0;0.6;0.9;1"
+<circle id="Ellipse_10-2-1" cy="177" data-name="Ellipse 10-2" class="cls-11" r="14">
+  <animate attributeName="visibility" dur="10s" repeatCount="indefinite" 
+     keyTimes="0;0.6;0.9;1" 
       values="visible;hidden;visible;hidden"/>
   <animateMotion dur="10s" begin="-5s" repeatCount="indefinite" path="M741,453.8
            A 370.5 200 0 1 0 0,453.8
