@@ -6,12 +6,12 @@ const SvgComponent = (props: Props) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     xmlnsXlink='http://www.w3.org/1999/xlink'
-    viewBox='0 0 740.76 1009.26'
+    viewBox='0 0 750.76 1029.26'
     {...props}
   >
     <defs>
       <linearGradient
-        id='linear-gradient'
+        id='ux-linear-gradient'
         x1={2804.05}
         x2={2804.05}
         y1={1305.51}
@@ -23,7 +23,7 @@ const SvgComponent = (props: Props) => (
         <stop offset={1} stopColor='#8bd8bd' stopOpacity={0.44} />
       </linearGradient>
       <linearGradient
-        id='linear-gradient-2'
+        id='ux-linear-gradient-2'
         x1={373.14}
         x2={373.14}
         y1={922}
@@ -34,7 +34,7 @@ const SvgComponent = (props: Props) => (
         <stop offset={1} stopColor='#9dd8bd' stopOpacity={0.6} />
       </linearGradient>
       <linearGradient
-        id='linear-gradient-3'
+        id='ux-linear-gradient-3'
         x1={373.07}
         x2={373.07}
         y1={869.14}
@@ -46,7 +46,7 @@ const SvgComponent = (props: Props) => (
         <stop offset={1} stopColor='#fff' />
       </linearGradient>
       <linearGradient
-        id='linear-gradient-4'
+        id='ux-linear-gradient-4'
         x1={373.85}
         x2={373.85}
         y1={712.17}
@@ -57,15 +57,15 @@ const SvgComponent = (props: Props) => (
         <stop offset={1} stopColor='#b3ffe3' />
       </linearGradient>
       <linearGradient
-        xlinkHref='#linear-gradient-4'
-        id='linear-gradient-5'
+        xlinkHref='#ux-linear-gradient-4'
+        id='ux-linear-gradient-5'
         x1={373.67}
         x2={373.67}
         y1={673.49}
         y2={427.61}
       />
       <linearGradient
-        id='linear-gradient-6'
+        id='ux-linear-gradient-6'
         x1={372.83}
         x2={372.83}
         y1={388.97}
@@ -78,8 +78,8 @@ const SvgComponent = (props: Props) => (
         <stop offset={1} stopColor='#fff' />
       </linearGradient>
       <linearGradient
-        xlinkHref='#linear-gradient-4'
-        id='linear-gradient-7'
+        xlinkHref='#ux-linear-gradient-4'
+        id='ux-linear-gradient-7'
         x1={372.76}
         x2={372.76}
         y1={336.11}
@@ -98,13 +98,13 @@ const SvgComponent = (props: Props) => (
           rx={369.14}
           ry={217.14}
           style={{
-            fill: 'url(#linear-gradient)',
+            fill: 'url(#ux-linear-gradient)',
           }}
         />
         <path
           d='m108.3 705.82.87 61.34h.17C114.37 853.19 230 922 373.07 922s259.7-68.81 264.73-154.84h.2l-.15-67.65Z'
           style={{
-            fill: 'url(#linear-gradient-2)',
+            fill: 'url(#ux-linear-gradient-2)',
           }}
         />
         <ellipse
@@ -115,13 +115,13 @@ const SvgComponent = (props: Props) => (
           rx={264.9}
           ry={168.05}
           style={{
-            fill: 'url(#linear-gradient-3)',
+            fill: 'url(#ux-linear-gradient-3)',
           }}
         />
         <path
           d='m180.24 554 .64 44.88h.12c3.68 62.94 88 113.28 192.66 113.28s190-50.34 193.67-113.28h.13l-.12-49.49Z'
           style={{
-            fill: 'url(#linear-gradient-4)',
+            fill: 'url(#ux-linear-gradient-4)',
           }}
         />
         <ellipse
@@ -132,7 +132,7 @@ const SvgComponent = (props: Props) => (
           rx={193.79}
           ry={122.94}
           style={{
-            fill: 'url(#linear-gradient-5)',
+            fill: 'url(#ux-linear-gradient-5)',
           }}
         />
         <path
@@ -167,7 +167,7 @@ const SvgComponent = (props: Props) => (
         <path
           d='m108 168 .86 66.13h.14c5 86 120.63 154.84 263.73 154.84s259.7-68.81 264.73-154.84h.17l-.15-67.65Z'
           style={{
-            fill: 'url(#linear-gradient-6)',
+            fill: 'url(#ux-linear-gradient-6)',
           }}
         />
         <ellipse
@@ -178,7 +178,7 @@ const SvgComponent = (props: Props) => (
           rx={264.9}
           ry={168.05}
           style={{
-            fill: 'url(#linear-gradient-7)',
+            fill: 'url(#ux-linear-gradient-7)',
           }}
         />
       </g>

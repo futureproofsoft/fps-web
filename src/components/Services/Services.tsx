@@ -1,13 +1,12 @@
 'use client';
 
-import CustomDevelopmentIcon from 'public/svg/servicesSVG/CustomDevelopmentIcon.svg';
-import MobileApplicationsIcon from 'public/svg/servicesSVG/MobileApplicationsIcon.svg';
 import * as React from 'react';
 
 import { ServiceItem } from '@/components/Services/ServiceItem';
 
+import CustomDevelopmentIcon from '../SVG/Custom-development';
+import MobileApplicationsIcon from '../SVG/Mobile-development';
 import UIUXIcon from '../SVG/UXUI-development';
-
 const data = [
   {
     image: (
