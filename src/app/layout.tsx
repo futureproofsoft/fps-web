@@ -8,15 +8,14 @@ import '@/styles/colors.css';
 import { Footer } from '@/components/Footer/Footer';
 import { NavBar } from '@/components/navbar/NavBar';
 
-import { siteConfig } from '@/constant/config';
 // !STARTERCONF Change these default meta
 // !STARTERCONF Look at @/constant/config to change them
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.title,
-    template: `%s | ${siteConfig.title}`,
+    default: 'Future-Proof Soft',
+    template: `%s | Future-Proof Soft`,
   },
-  description: siteConfig.description,
+  description: 'Future-Proof Soft web presentation',
   robots: { index: true, follow: true },
   // !STARTERCONF this is the default favicon, you can generate your own from https://realfavicongenerator.net/
   // ! copy to /favicon folder
@@ -26,22 +25,22 @@ export const metadata: Metadata = {
     apple: '/favicon/apple-touch-icon.png',
   },
   manifest: `/favicon/site.webmanifest`,
-  openGraph: {
-    url: siteConfig.url,
-    title: siteConfig.title,
-    description: siteConfig.description,
-    siteName: siteConfig.title,
-    images: [`${siteConfig.url}/images/og.jpg`],
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: siteConfig.title,
-    description: siteConfig.description,
-    images: [`${siteConfig.url}/images/og.jpg`],
-    // creator: '@th_clarence',
-  },
+  // openGraph: {
+  //   url: siteConfig.url,
+  //   title: siteConfig.title,
+  //   description: siteConfig.description,
+  //   siteName: siteConfig.title,
+  //   images: [`${siteConfig.url}/images/og.jpg`],
+  //   type: 'website',
+  //   locale: 'en_US',
+  // },
+  // twitter: {
+  //   card: 'summary_large_image',
+  //   title: siteConfig.title,
+  //   description: siteConfig.description,
+  //   images: [`${siteConfig.url}/images/og.jpg`],
+  //   // creator: '@th_clarence',
+  // },
   // authors: [
   //   {
   //     name: 'Theodorus Clarence',
