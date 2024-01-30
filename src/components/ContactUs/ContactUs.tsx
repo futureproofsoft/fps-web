@@ -23,15 +23,20 @@ export const ContactUs = () => {
   const captchaRef = useRef<Captcha>(null);
 
   async function onSubmit(data: FormData) {
-    setIsSending(true);
-    const captcha = await captchaRef.current?.executeAsync();
-    const result = await validateCaptcha(captcha as string);
-    console.log(result);
-    if (result.success) {
-      sendEmail(data, () => setIsSending(false));
-    } else {
+    try {
+      setIsSending(true);
+      const captcha = await captchaRef.current?.executeAsync();
+      const result = await validateCaptcha(captcha as string);
+      if (result.success) {
+        await sendEmail(data);
+      } else {
+        console.error(result);
+      }
+      //eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (error: any) {
+      console.error(error);
+    } finally {
       setIsSending(false);
-      alert('error');
     }
   }
 

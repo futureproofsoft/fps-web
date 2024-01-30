@@ -1,19 +1,17 @@
 import { FormData } from '../components/ContactUs/ContactUs';
 
-export const sendEmail = (data: FormData, callback: () => void) => {
+export const sendEmail = (data: FormData) => {
   const apiEndpoint = '/api/email';
 
-  fetch(apiEndpoint, {
+  return fetch(apiEndpoint, {
     method: 'POST',
     body: JSON.stringify(data),
   })
     .then((res) => res.json())
     .then((response) => {
       alert(response.message);
-      callback();
     })
     .catch((err) => {
       alert(err);
-      callback();
     });
 };
