@@ -9,15 +9,15 @@ export const ReviewsNew = () => {
   const data = [
     {
       name: 'Miloš Rakić',
-      title: 'CEO at Fidija',
-      message:
-        'We have been working with Future Proof Soft Co on our TogetherAll project for over a 2 years now, and we have been consistently impressed with their expertise, professionalism, and dedication. The Future Proof Soft team has a deep understanding of our needs, and they have consistently delivered high-quality work on time. We are highly satisfied with their services, and we would highly recommend them to any company looking for a reliable and skilled software development partner.',
+      title: 'CEO at Fidija Projekt Ltd',
+      message: `We have been working with Future-Proof Soft Company on our TogetherAll project for over 2 years now, and we have been consistently impressed with their expertise, professionalism, and dedication. The Future-Proof Soft team has a deep understanding of our needs, and they have consistently delivered high-quality work on time. We are highly satisfied with their services, and we would highly recommend them to any company looking for a reliable and skilled software development partner.`,
     },
     {
-      name: 'Sava Tasić',
-      title: 'CEO at Future Proof Soft',
-      message:
-        'Prepare yourself for a rollercoaster of mediocrity and despair! I recently had the misfortune of subjecting myself to what can only be described as the Picasso of terrible experiences. If disappointment were an Olympic sport, this place would take home the gold, silver, and bronze.',
+      name: 'Ivan Trajković',
+      title: 'CEO at Engineers Ltd',
+      message: `We've been working with Future-Proof Soft for a while now. From the initial consultation to the final implementation and ongoing maintenance, the team demonstrated a deep understanding of our business needs and provided a reliable solution. It's clear that they prioritize client success and are committed to building long-term relationships. The team went above and beyond to ensure that we felt supported throughout the entire process. We definitely recommend Future-Proof Soft to any organization seeking reliable and innovative IT solutions. They are a valuable partner to have.`,
+
+      // 'Prepare yourself for a rollercoaster of mediocrity and despair! I recently had the misfortune of subjecting myself to what can only be described as the Picasso of terrible experiences. If disappointment were an Olympic sport, this place would take home the gold, silver, and bronze.',
     },
   ];
   const [[page], setPage] = React.useState([0]);

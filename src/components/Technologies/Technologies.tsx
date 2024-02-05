@@ -13,8 +13,7 @@ export const Technologies = () => {
           TECHNOLOGIES
         </h5>
         <h2 className='3xl:text-6xl  mb:pt-6   mb:pb-20 mb:text-2xl  mb:leading-none font-bold leading-none tracking-normal md:pb-24  lg:pb-24 lg:pt-5 xl:text-[38px] 2xl:pb-20 2xl:pt-7 2xl:text-[44px]'>
-          The <span className='text-greenText'>technologies</span> we apply to
-          bring <span className='text-greenText'>your idea</span> to perfection.
+          The <span className='text-greenText'>technologies</span> we excel at:
         </h2>
       </div>
       <div className='mb:-mx-6'>
