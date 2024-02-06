@@ -118,7 +118,7 @@ const SvgComponent = (props: Props) => (
       />
       <style>{'.cls-11{fill:#fff}'}</style>
     </defs>
-    <title>Asset 13</title>
+    <title>Custom development</title>
     <g id='Layer_2' data-name='Layer 2'>
       <g id='Layer_1-2' data-name='Layer 1'>
         <ellipse
@@ -267,7 +267,7 @@ const SvgComponent = (props: Props) => (
         <path
           d='M1.39 367.42v444.21H2c11.34 113.92 172 204.25 368.49 204.25S727.69 925.55 739 811.63h.65V367.42Z'
           style={{
-            fill: 'url(#custom-linear-gradient-1)',
+            fill: 'url(#custom-linear-gradient)',
           }}
         />
       </g>

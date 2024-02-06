@@ -87,7 +87,7 @@ const SvgComponent = (props: Props) => (
       />
       <style>{'.cls-6{fill:#fff}'}</style>
     </defs>
-    <title>Asset 14</title>
+    <title>UI/UX Design</title>
     <g id='Layer_2' data-name='Layer 2'>
       <g id='Layer_1-2' data-name='Layer 1'>
         <ellipse

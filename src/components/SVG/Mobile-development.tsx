@@ -110,7 +110,7 @@ const SvgComponent = (props: Props) => (
         }
       </style>
     </defs>
-    <title>Asset 12</title>
+    <title>Mobile development</title>
     <g
       style={{
         isolation: 'isolate',
