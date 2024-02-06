@@ -6,18 +6,15 @@ import { WorksItem } from '@/components/HowItWorks/WorksItem';
 const works = [
   {
     itemName: 'Discovery call',
-    itemDescription:
-      'We start each project with preliminary discussions. This approach allows us to get to know our clients needs. We also gather any useful information that will be valuable for further project phases.',
+    itemDescription: `At the beginning of each project, we kick off with a Discovery Call. Establishing a mutual understanding allows us to delve into the intricacies of our client's needs. Through this interaction, we gather invaluable insights that will lay the foundation for subsequent project phases.`,
   },
   {
-    itemName: 'Workshops',
-    itemDescription:
-      'After getting an overview of the project, we then move on to extensive research with the client. Here, we pinpoint the specific objectives that the final product needs to meet.',
+    itemName: 'Collaborative Strategy Sessions',
+    itemDescription: `Following the project overview, we transition into intensive collaboration with the client. In these sessions, our goal is to precisely define the objectives that the final product must achieve.`,
   },
   {
-    itemName: 'Planning and design',
-    itemDescription:
-      'Clearly defining intentions enables us to take a step forward and start the development. Our UX/UI designers, developers, and PMs plan each stage of the work in close collaboration with the client.',
+    itemName: 'Unified Planning and Development Approach:',
+    itemDescription: `With well-defined goals in place, we advance into the Planning and Design phase. Our UX/UI designers, developers, and project managers collaborate closely to plan each stage of the work. This ensures a seamless transition from strategy to development.`,
   },
 ];
 
