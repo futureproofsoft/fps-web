@@ -51,11 +51,8 @@ export const ContactUs = () => {
             CONTACT US
           </h5>
           <h2 className='3xl:text-6xl  mb:pt-2 mb:text-2xl font-bold tracking-normal sm:leading-none md:pr-4 xl:text-[38px] 2xl:text-[44px] 2xl:leading-none'>
-            Do you need someone to{' '}
-            <span className='text-greenText'>
-              transform your vision into reality
-            </span>
-            ? Then get in touch with us.
+            Make the first step.
+            <br /> Get in touch with us.
           </h2>
         </div>
         <div>
