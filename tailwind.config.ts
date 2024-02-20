@@ -35,6 +35,7 @@ export default {
       backgroundImage: {
         'custom-gradient': 'linear-gradient(68deg, var(--tw-gradient-stops))',
       },
+
       fontFamily: {
         primary: [
           'normal normal bold 68px/72px Blinker',
@@ -101,5 +102,21 @@ export default {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  //eslint-disable-next-line
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    function ({ addUtilities }: any) {
+      const newUtilities = {
+        '.hide-scrollbar': {
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+          '-ms-overflow-style': 'none', // IE and Edge
+          'scrollbar-width': 'none', // Firefox
+        },
+      };
+      addUtilities(newUtilities);
+    },
+  ],
 } satisfies Config;

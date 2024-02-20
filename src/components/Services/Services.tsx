@@ -122,7 +122,7 @@ export const Services = () => {
       </h2>
 
       {isLargeScreen && (
-        <div className='mb:flex  mb:flex-row mb:-mx-6 mb:px-6  overflow-x-auto '>
+        <div className='mb:flex  mb:flex-row mb:-mx-6 mb:px-6  hide-scrollbar overflow-x-auto '>
           {data.map((item, index) => (
             <div
               key={index}

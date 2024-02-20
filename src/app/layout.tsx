@@ -56,7 +56,7 @@ export default function RootLayout({
 }) {
   return (
     <html className='overflow-x-hidden !scroll-smooth'>
-      <body className='bg-blackBg 3xl:mx-36 mb:mx-6  text-white sm:mx-12  lg:mx-16 xl:mx-20 2xl:mx-28'>
+      <body className='bg-blackBg 3xl:mx-36 mb:mx-6  hide-scrollbar text-white  sm:mx-12 lg:mx-16 xl:mx-20 2xl:mx-28'>
         <NavBar />
         {children}
         <Footer />
