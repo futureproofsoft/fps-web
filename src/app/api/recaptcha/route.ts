@@ -4,7 +4,7 @@ export async function POST(request: NextRequest) {
   const { token } = await request.json();
   try {
     const response = await axios.post(
-      `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.REACT_APP_SECRET_KEY}&response=${token}`
+      `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.NEXT_PUBLIC_REACT_APP_SECRET_KEY}&response=${token}`
     );
 
     return NextResponse.json({ success: response.data.success });

@@ -8,13 +8,13 @@ const OAuth2 = google.auth.OAuth2;
 const createTransporter = async (): Promise<Transporter | null> => {
   try {
     const oauth2Client = new OAuth2(
-      process.env.CLIENT_ID,
-      process.env.CLIENT_SECRET,
+      process.env.NEXT_PUBLIC_CLIENT_ID,
+      process.env.NEXT_PUBLIC_CLIENT_SECRET,
       'https://developers.google.com/oauthplayground'
     );
 
     oauth2Client.setCredentials({
-      refresh_token: process.env.REFRESH_TOKEN,
+      refresh_token: process.env.NEXT_PUBLIC_REFRESH_TOKEN,
     });
 
     const accessToken = await new Promise((resolve, reject) => {
@@ -32,11 +32,11 @@ const createTransporter = async (): Promise<Transporter | null> => {
       secure: true,
       auth: {
         type: 'OAuth2',
-        user: process.env.USER_EMAIL,
+        user: process.env.NEXT_PUBLIC_USER_EMAIL,
         accessToken,
-        clientId: process.env.CLIENT_ID,
-        clientSecret: process.env.CLIENT_SECRET,
-        refreshToken: process.env.REFRESH_TOKEN,
+        clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
+        clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
+        refreshToken: process.env.NEXT_PUBLIC_REFRESH_TOKEN,
       },
     } as TransportOptions);
     return transporter;
@@ -49,8 +49,8 @@ export async function POST(request: NextRequest) {
   const { email, name, message } = await request.json();
 
   const mailOptions: Mail.Options = {
-    from: process.env.MY_EMAIL,
-    to: 'majstorovic.todor@gmail.com',
+    from: process.env.NEXT_PUBLIC_MY_EMAIL,
+    to: 'info@futureproofsoft.com',
     // cc: email, (uncomment this line if you want to send a copy to the sender)
     subject: `Message from ${name} (${email})`,
     text: message,
