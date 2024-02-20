@@ -1,4 +1,6 @@
 'use client';
+import Linkedin from 'public/svg/ElementSvg/linkedin.svg';
+import Mail from 'public/svg/ElementSvg/mail.svg';
 import * as React from 'react';
 import { useRef, useState } from 'react';
 import Captcha from 'react-google-recaptcha';
@@ -46,15 +48,33 @@ export const ContactUs = () => {
       className='3xl:py-36 mb:py-20 sm:pb-24 lg:py-20 xl:py-28'
     >
       <div className='mb:grid-rows-1 mb:grid-cols-1 mb:gap-10 grid pt-8 md:grid-cols-2 md:grid-rows-1 lg:gap-40  '>
-        <div className='flex flex-col gap-12'>
-          <h5 className='border-greenText  3xl:text-2xl  border-s-4 px-3 font-bold tracking-[4.8px] sm:text-[12px] md:text-sm  xl:text-lg'>
+        <div className='flex flex-col md:gap-12'>
+          <h5 className='border-greenText 3xl:text-2xl  border-s-4 px-3 font-bold tracking-[4.8px] sm:text-[12px] md:text-sm lg:text-base xl:text-lg'>
             CONTACT US
           </h5>
-          <h2 className='3xl:text-6xl  mb:pt-2 mb:text-2xl font-bold tracking-normal sm:leading-none md:pr-4 xl:text-[38px] 2xl:text-[44px] 2xl:leading-none'>
+          <h2 className='3xl:text-6xl  mb:pt-6 mb:text-2xl font-bold tracking-normal sm:leading-none md:pr-4 xl:text-[38px] 2xl:text-[44px] 2xl:leading-none'>
             Make the first step.
             <br /> Get in touch with us.
           </h2>
+          <div className=' mb:hidden flex flex-col justify-end gap-2 md:flex'>
+            <a
+              href='mailto:info@futureproofsoft.com'
+              className='3xl:text-xl flex items-center gap-3 xl:text-base 2xl:text-lg'
+            >
+              <Mail className='mb:w-[26px] m-1 flex 2xl:w-[32px] ' />
+              info@futureproofsoft.com
+            </a>
+
+            <a
+              href='https://rs.linkedin.com/company/future-proof-soft'
+              className='3xl:text-xl flex items-center gap-3 xl:text-base 2xl:text-lg'
+            >
+              <Linkedin className='mb:w-[26px] m-1 2xl:w-[32px]' />
+              Future-Proof Soft
+            </a>
+          </div>
         </div>
+
         <div>
           <form
             className='grid justify-normal'

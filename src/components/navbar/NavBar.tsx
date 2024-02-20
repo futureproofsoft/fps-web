@@ -115,7 +115,7 @@ export const NavBar = () => {
             <a href='#' onClick={closeMenu}>
               <LogoHeader
                 alt='Logo'
-                className='3xl:w-[270px] mb:w-[200px] z-20 py-4 md:w-[220px]   lg:w-[200px] xl:w-[200px] 2xl:w-[220px]'
+                className='3xl:w-[270px] mb:w-[170px] z-20 py-4 md:w-[220px]   lg:w-[200px] xl:w-[200px] 2xl:w-[220px]'
               />
             </a>
 
@@ -123,12 +123,12 @@ export const NavBar = () => {
               {isMenuOpen ? (
                 <Close
                   alt='Close bar'
-                  className='border-greenText mb:w-[35px] rounded-full border-[1px] p-1 md:w-[40px]'
+                  className='border-greenText mb:w-[30px] rounded-full border-[1px] p-1 md:w-[40px]'
                 />
               ) : (
                 <MenuBar
                   alt='Menu bar'
-                  className='border-greenText mb:w-[35px] rounded-full border-[1px] p-1 md:w-[40px]'
+                  className='border-greenText mb:w-[30px] rounded-full border-[1px] p-1 md:w-[40px]'
                 />
               )}
             </button>
