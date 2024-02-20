@@ -3,7 +3,7 @@ import * as React from 'react';
 
 export const Hero = () => {
   return (
-    <section className='3xl:py-36 mb:py-6 items-center justify-between sm:flex sm:py-12 lg:py-20'>
+    <section className='3xl:py-36 mb:py-16 items-center justify-between sm:flex sm:py-12 lg:py-20'>
       <div className=' mb:pb-16  sm:w-1/2 sm:pb-0'>
         <h2 className='3xl:text-[68px] mb:text-[30px] mb:pb-8 pb-6 font-bold leading-none sm:text-[25px] lg:text-[40px] xl:text-[50px]  2xl:text-[55px]'>
           Innovate <br />
