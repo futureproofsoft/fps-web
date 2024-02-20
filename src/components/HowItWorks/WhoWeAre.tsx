@@ -12,8 +12,10 @@ export const WhoWeAre = () => {
       <div className='mb:flex-col flex justify-between lg:flex-row'>
         <h2 className='3xl:text-6xl lg:pb mb:pb-14 mb:pt-6 mb:text-2xl mb:leading-none font-bold  leading-none tracking-normal lg:pt-5 lg:text-[30px] xl:text-[38px] 2xl:pb-20 2xl:pt-7 2xl:text-[44px]'>
           The <span className='text-greenText'>digital partner you need</span>
-          <br className='sm:hidden lg:flex' /> to create{' '}
-          <span className='text-greenText'>user-friendly and sustainable</span>{' '}
+          <span className='sm:hidden lg:flex' /> to create{' '}
+          <span className='text-greenText'>
+            user-friendly and <br className='mb:hidden lg:flex' /> sustainable
+          </span>{' '}
           solutions.
         </h2>
         <p className='3xl:text-xl font-normal sm:text-xs lg:w-5/12 xl:text-sm  2xl:text-base'>
