@@ -61,7 +61,7 @@ export const Services = () => {
     handleResize();
     window.addEventListener('resize', handleResize);
 
-    setActiveIndex(1);
+    // setActiveIndex(0);
 
     return () => {
       window.removeEventListener('resize', handleResize);

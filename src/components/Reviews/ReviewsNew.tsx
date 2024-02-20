@@ -65,10 +65,10 @@ export const ReviewsNew = () => {
             </div>
             <div className='flex flex-col '>
               <div className='flex'>
-                <Quote className='3xl:w-16 mb:w-10 mb:-ml-3 mb:-mb-7 absolute rotate-180 md:-mb-5 md:-ml-10 xl:w-12' />
+                <Quote className='3xl:w-16 mb:w-10 mb:-ml-3 mb:-mb-7 absolute rotate-180 md:-mb-5 md:-ml-6 xl:w-12' />
               </div>
 
-              <p className='mb:text-sm mb:h-[220px] 3xl:text-2xl z-10 my-10 flex h-[200px] items-center justify-center sm:h-[200px] sm:text-base md:text-base lg:h-[180px] lg:text-base xl:text-lg 2xl:text-xl'>
+              <p className='mb:text-sm mb:h-[220px] 3xl:text-2xl z-10 my-10 flex h-[200px] items-center justify-center sm:h-[150px] sm:text-base md:text-base lg:h-[180px] lg:text-base xl:text-lg 2xl:text-xl'>
                 {activeItem.message}
               </p>
 
