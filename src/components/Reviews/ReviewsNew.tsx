@@ -31,7 +31,7 @@ export const ReviewsNew = () => {
   return (
     <section id='reviews' className='3xl:py-36 mb:pt-20 sm:py-24 lg:py-28'>
       <div className='flex flex-col '>
-        <h5 className='border-greenText 3xl:text-2xl mb:text-sm border-s-4 px-3 font-bold tracking-[4.8px] md:text-sm lg:text-base xl:text-lg'>
+        <h5 className='border-greenText 3xl:text-2xl  border-s-4 px-3 font-bold tracking-[4.8px] sm:text-[12px] md:text-sm lg:text-base xl:text-lg'>
           REVIEWS
         </h5>
 

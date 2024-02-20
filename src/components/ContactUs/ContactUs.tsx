@@ -49,7 +49,7 @@ export const ContactUs = () => {
     >
       <div className='mb:grid-rows-1 mb:grid-cols-1 mb:gap-10 grid pt-8 md:grid-cols-2 md:grid-rows-1 lg:gap-40  '>
         <div className='flex flex-col gap-12'>
-          <h5 className='border-greenText  3xl:text-2xl  border-s-4 px-3 font-bold tracking-[4.8px] sm:text-[12px] md:text-sm  xl:text-lg'>
+          <h5 className='border-greenText 3xl:text-2xl  border-s-4 px-3 font-bold tracking-[4.8px] sm:text-[12px] md:text-sm lg:text-base xl:text-lg'>
             CONTACT US
           </h5>
           <h2 className='3xl:text-6xl  mb:pt-2 mb:text-2xl font-bold tracking-normal sm:leading-none md:pr-4 xl:text-[38px] 2xl:text-[44px] 2xl:leading-none'>
