@@ -1,4 +1,6 @@
 'use client';
+import Linkedin from 'public/svg/ElementSvg/linkedin.svg';
+import Mail from 'public/svg/ElementSvg/mail.svg';
 import * as React from 'react';
 import { useRef, useState } from 'react';
 import Captcha from 'react-google-recaptcha';
@@ -54,7 +56,25 @@ export const ContactUs = () => {
             Make the first step.
             <br /> Get in touch with us.
           </h2>
+          <div className=' mb:hidden flex flex-col justify-end gap-2 md:flex'>
+            <a
+              href='mailto:info@futureproofsoft.com'
+              className='3xl:text-xl flex items-center gap-3 xl:text-base 2xl:text-lg'
+            >
+              <Mail className='mb:w-[26px] m-1 flex 2xl:w-[32px] ' />
+              info@futureproofsoft.com
+            </a>
+
+            <a
+              href='https://rs.linkedin.com/company/future-proof-soft'
+              className='3xl:text-xl flex items-center gap-3 xl:text-base 2xl:text-lg'
+            >
+              <Linkedin className='mb:w-[26px] m-1 2xl:w-[32px]' />
+              Future-Proof Soft
+            </a>
+          </div>
         </div>
+
         <div>
           <form
             className='grid justify-normal'
