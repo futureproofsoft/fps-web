@@ -34,16 +34,12 @@ export const ContactUs = () => {
       if (result.success) {
         await sendEmail(data);
         setMessageSent(true);
-        console.log(data);
-      } else {
-        console.error(result);
       }
       //eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
-      console.error(error);
+      setErrorMessage(true);
     } finally {
       setIsSending(false);
-      setErrorMessage(true);
     }
   }
 
