@@ -1,11 +1,11 @@
 'use client';
 import Linkedin from 'public/svg/ElementSvg/linkedin.svg';
 import Mail from 'public/svg/ElementSvg/mail.svg';
-import * as React from 'react';
 import { useRef, useState } from 'react';
 import Captcha from 'react-google-recaptcha';
 import { useForm } from 'react-hook-form';
 
+import { Alert } from '@/components/ContactUs/Alert';
 import { Circuit } from '@/components/ContactUs/Circuit';
 
 import { sendEmail } from '@/utils/send-email';
@@ -21,6 +21,8 @@ export type FormData = {
 
 export const ContactUs = () => {
   const [isSending, setIsSending] = useState(false);
+  const [messageSent, setMessageSent] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(false);
   const { register, handleSubmit } = useForm<FormData>();
   const captchaRef = useRef<Captcha>(null);
 
@@ -31,6 +33,8 @@ export const ContactUs = () => {
       const result = await validateCaptcha(captcha as string);
       if (result.success) {
         await sendEmail(data);
+        setMessageSent(true);
+        console.log(data);
       } else {
         console.error(result);
       }
@@ -39,6 +43,7 @@ export const ContactUs = () => {
       console.error(error);
     } finally {
       setIsSending(false);
+      setErrorMessage(true);
     }
   }
 
@@ -127,12 +132,24 @@ export const ContactUs = () => {
                     isSending ? 'gap-4' : ''
                   }`}
                 >
-                  <div>{isSending ? 'Sending...' : 'Send'}</div>
-                  <div>{isSending && <Circuit />}</div>
+                  <p>{isSending ? 'Sending...' : 'Send'}</p>
+                  {isSending && <Circuit />}
                 </div>
               </button>
             </div>
           </form>
+          {messageSent && (
+            <Alert
+              labelUp='Thanks for reaching out.'
+              labelDown='We’ll get back to you soon!'
+            />
+          )}
+          {errorMessage && (
+            <Alert
+              labelUp='Something went wrong.'
+              labelDown='Please, try again.'
+            />
+          )}
         </div>
       </div>
     </section>
