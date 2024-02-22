@@ -16,8 +16,6 @@ export const ReviewsNew = () => {
       name: 'Ivan Trajković',
       title: 'CEO at Engineers Ltd',
       message: `We've been working with Future-Proof Soft for a while now. From the initial consultation to the final implementation and ongoing maintenance, the team demonstrated a deep understanding of our business needs and provided a reliable solution. It's clear that they prioritize client success and are committed to building long-term relationships. The team went above and beyond to ensure that we felt supported throughout the entire process. We definitely recommend Future-Proof Soft to any organization seeking reliable and innovative IT solutions. They are a valuable partner to have.`,
-
-      // 'Prepare yourself for a rollercoaster of mediocrity and despair! I recently had the misfortune of subjecting myself to what can only be described as the Picasso of terrible experiences. If disappointment were an Olympic sport, this place would take home the gold, silver, and bronze.',
     },
   ];
   const [[page], setPage] = React.useState([0]);

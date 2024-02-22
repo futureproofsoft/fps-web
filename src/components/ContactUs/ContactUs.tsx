@@ -1,11 +1,11 @@
 'use client';
 import Linkedin from 'public/svg/ElementSvg/linkedin.svg';
 import Mail from 'public/svg/ElementSvg/mail.svg';
-import * as React from 'react';
 import { useRef, useState } from 'react';
 import Captcha from 'react-google-recaptcha';
 import { useForm } from 'react-hook-form';
 
+import { Alert } from '@/components/ContactUs/Alert';
 import { Circuit } from '@/components/ContactUs/Circuit';
 
 import { sendEmail } from '@/utils/send-email';
@@ -21,7 +21,9 @@ export type FormData = {
 
 export const ContactUs = () => {
   const [isSending, setIsSending] = useState(false);
-  const { register, handleSubmit } = useForm<FormData>();
+  const [messageSent, setMessageSent] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(false);
+  const { register, handleSubmit, reset } = useForm<FormData>();
   const captchaRef = useRef<Captcha>(null);
 
   async function onSubmit(data: FormData) {
@@ -31,12 +33,11 @@ export const ContactUs = () => {
       const result = await validateCaptcha(captcha as string);
       if (result.success) {
         await sendEmail(data);
-      } else {
-        console.error(result);
+        setMessageSent(true);
       }
       //eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
-      console.error(error);
+      setErrorMessage(true);
     } finally {
       setIsSending(false);
     }
@@ -89,6 +90,7 @@ export const ContactUs = () => {
                 border-x-0 border-t-0 bg-transparent py-2 focus:ring-0'
                 required
                 autoComplete='off'
+                maxLength={40}
               />
             </div>
             <div>
@@ -101,6 +103,7 @@ export const ContactUs = () => {
                 border-x-0	 border-t-0 bg-transparent py-2 focus:ring-0'
                 required
                 autoComplete='off'
+                maxLength={64}
               />
             </div>
             <div>
@@ -108,7 +111,7 @@ export const ContactUs = () => {
                 placeholder='MESSAGE'
                 className='border-greenText border-b-1 focus:border-b-1 focus:border-greenText h-[200px] w-full border-x-0 border-t-0 bg-transparent py-2 focus:ring-0'
                 id='message'
-                {...register('message', { required: true, maxLength: 500 })}
+                {...register('message', { required: true })}
                 required
                 maxLength={500}
               />
@@ -121,18 +124,34 @@ export const ContactUs = () => {
               />
             </div>
             <div className='flex items-center justify-center pt-4'>
-              <button type='submit' className={submitStyle}>
+              <button
+                onClick={() => messageSent && reset()}
+                type='submit'
+                className={submitStyle}
+              >
                 <div
                   className={`flex items-center justify-between ${
                     isSending ? 'gap-4' : ''
                   }`}
                 >
-                  <div>{isSending ? 'Sending...' : 'Send'}</div>
-                  <div>{isSending && <Circuit />}</div>
+                  <p>{isSending ? 'Sending...' : 'Send'}</p>
+                  {isSending && <Circuit />}
                 </div>
               </button>
             </div>
           </form>
+          {messageSent && (
+            <Alert
+              labelUp='Thanks for reaching out.'
+              labelDown='We’ll get back to you soon!'
+            />
+          )}
+          {errorMessage && (
+            <Alert
+              labelUp='Something went wrong.'
+              labelDown='Please, try again.'
+            />
+          )}
         </div>
       </div>
     </section>
