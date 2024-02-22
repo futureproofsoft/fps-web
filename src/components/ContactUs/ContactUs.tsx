@@ -23,7 +23,7 @@ export const ContactUs = () => {
   const [isSending, setIsSending] = useState(false);
   const [messageSent, setMessageSent] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
-  const { register, handleSubmit } = useForm<FormData>();
+  const { register, handleSubmit, reset } = useForm<FormData>();
   const captchaRef = useRef<Captcha>(null);
 
   async function onSubmit(data: FormData) {
@@ -90,6 +90,7 @@ export const ContactUs = () => {
                 border-x-0 border-t-0 bg-transparent py-2 focus:ring-0'
                 required
                 autoComplete='off'
+                maxLength={40}
               />
             </div>
             <div>
@@ -102,6 +103,7 @@ export const ContactUs = () => {
                 border-x-0	 border-t-0 bg-transparent py-2 focus:ring-0'
                 required
                 autoComplete='off'
+                maxLength={64}
               />
             </div>
             <div>
@@ -109,7 +111,7 @@ export const ContactUs = () => {
                 placeholder='MESSAGE'
                 className='border-greenText border-b-1 focus:border-b-1 focus:border-greenText h-[200px] w-full border-x-0 border-t-0 bg-transparent py-2 focus:ring-0'
                 id='message'
-                {...register('message', { required: true, maxLength: 500 })}
+                {...register('message', { required: true })}
                 required
                 maxLength={500}
               />
@@ -122,7 +124,11 @@ export const ContactUs = () => {
               />
             </div>
             <div className='flex items-center justify-center pt-4'>
-              <button type='submit' className={submitStyle}>
+              <button
+                onClick={() => messageSent && reset()}
+                type='submit'
+                className={submitStyle}
+              >
                 <div
                   className={`flex items-center justify-between ${
                     isSending ? 'gap-4' : ''
