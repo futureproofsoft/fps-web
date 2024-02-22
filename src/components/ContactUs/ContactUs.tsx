@@ -103,7 +103,6 @@ export const ContactUs = () => {
                 border-x-0	 border-t-0 bg-transparent py-2 focus:ring-0'
                 required
                 autoComplete='off'
-                maxLength={64}
               />
             </div>
             <div>
